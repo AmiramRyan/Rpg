@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Props
+  - Breakable
   layers:
   - Default
   - TransparentFX
@@ -40,6 +42,9 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Props
+    uniqueID: 4106713293
     locked: 0
   - name: Player
     uniqueID: 3987543467
