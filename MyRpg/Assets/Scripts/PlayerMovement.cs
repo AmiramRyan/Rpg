@@ -5,8 +5,12 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     #region Public vars
+    [Header("Vars")]
     public float playerSpeed;
+
+    [Header("Objects Ref")]
     public Rigidbody2D myRigidBody;
+    public Animator myAnimator;
 
     #endregion
 
@@ -19,6 +23,7 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         myRigidBody = GetComponent<Rigidbody2D>();
+        myAnimator = GetComponent<Animator>();
     }
 
 
@@ -27,14 +32,27 @@ public class PlayerMovement : MonoBehaviour
         change = Vector3.zero; //reset the change 
         change.x = Input.GetAxisRaw("Horizontal");
         change.y = Input.GetAxisRaw("Vertical");
-        if (change != Vector3.zero)
-        {
-            MoveCharacter();
-        }
+        PlayAnimationsAndMove();
     }
 
     void MoveCharacter()
     {
         myRigidBody.MovePosition(transform.position + change * playerSpeed * Time.deltaTime);
+    }
+
+    void PlayAnimationsAndMove()
+    {
+        if (change != Vector3.zero)
+        {
+            MoveCharacter();
+            myAnimator.SetBool("isMoving", true);
+            myAnimator.SetFloat("moveX", change.x);
+            myAnimator.SetFloat("moveY", change.y);
+
+        }
+        else
+        {
+            myAnimator.SetBool("isMoving", false);
+        }
     }
 }
