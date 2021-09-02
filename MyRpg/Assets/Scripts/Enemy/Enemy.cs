@@ -15,13 +15,20 @@ public class Enemy : MonoBehaviour
     public float speed;
     public int dmg;
     public string enemyName;
-    void Start()
-    {
 
+    public void Knock(Rigidbody2D myRb, float knockTime)
+    {
+        StartCoroutine(knockCo(myRb, knockTime));
     }
 
-    void Update()
+    private IEnumerator knockCo(Rigidbody2D myRb, float knockTime)
     {
-        
+        if (myRb != null)
+        {
+            yield return new WaitForSeconds(knockTime);
+            myRb.velocity = Vector2.zero;
+            currentState = EnemyState.idle;
+            myRb.velocity = Vector2.zero;
+        }
     }
 }

@@ -34,10 +34,6 @@ public class Log : Enemy
                 ChangeState(EnemyState.walk);
             }
         }
-        else
-        {
-            ChangeState(EnemyState.idle);
-        }
     }
 
     private void ChangeState(EnemyState newState)
