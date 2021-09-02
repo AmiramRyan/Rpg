@@ -13,7 +13,6 @@ public class PlayerMovement : MonoBehaviour
     #region Public vars
     [Header("Vars")]
     public float playerSpeed;
-    public float attackCooldown;
 
     [Header("Objects Ref")]
     public Rigidbody2D myRigidBody;
@@ -83,7 +82,7 @@ public class PlayerMovement : MonoBehaviour
         currentState = PlayerState.attack;
         yield return null;
         myAnimator.SetBool("isAttacking", false);
-        yield return new WaitForSeconds(attackCooldown);
+        yield return new WaitForSeconds(.33f);
         currentState = PlayerState.walk;
     }
 
