@@ -34,17 +34,8 @@ public class PlayerMovement : MonoBehaviour
         currentState = PlayerState.walk;
         myRigidBody = GetComponent<Rigidbody2D>();
         myAnimator = GetComponent<Animator>();
-        myAnimator.SetFloat("moveX", 0);
-        myAnimator.SetFloat("moveY", -1);
     }
 
-    private void Update()
-    {
-        if (Input.GetButtonDown("attack") && currentState != PlayerState.attack)
-        {
-            StartCoroutine(AttackCo());
-        }
-    }
 
     void FixedUpdate()
     {
@@ -56,9 +47,15 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        if (Input.GetButtonDown("attack") && currentState != PlayerState.attack)
+        {
+            StartCoroutine(AttackCo());
+        }
+    }
     void MoveCharacter()
     {
-        change.Normalize();
         myRigidBody.MovePosition(transform.position + change * playerSpeed * Time.deltaTime);
     }
 
