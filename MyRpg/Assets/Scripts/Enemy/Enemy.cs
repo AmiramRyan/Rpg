@@ -11,14 +11,34 @@ public enum EnemyState{
 public class Enemy : MonoBehaviour
 {
     public EnemyState currentState;
-    public float hitPoints;
     public float speed;
     public int dmg;
     public string enemyName;
+    public FloatValue maxHealth;
+    public float hitPoints;
 
-    public void Knock(Rigidbody2D myRb, float knockTime)
+    private void Awake()
+    {
+        hitPoints = maxHealth.initialValue;
+    }
+
+    private void TakeDmg(float dmg)
+    {
+        hitPoints -= dmg;
+        if (hitPoints <= 0)
+        {
+            //die animations
+            //spawn loot randomly
+            //destroy obj
+            Debug.Log("I am dead :(");
+            this.gameObject.SetActive(false); // for debugging 
+        }
+    }
+
+    public void Knock(Rigidbody2D myRb, float knockTime , float dmg)
     {
         StartCoroutine(knockCo(myRb, knockTime));
+        TakeDmg(dmg);
     }
 
     private IEnumerator knockCo(Rigidbody2D myRb, float knockTime)
