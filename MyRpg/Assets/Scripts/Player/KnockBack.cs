@@ -35,7 +35,7 @@ public class KnockBack : MonoBehaviour
                 }
             }
         }
-        if (other.gameObject.CompareTag("Breakable") && this.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Breakable") && this.gameObject.CompareTag("PlayerAttackHitBox"))
         {
             other.GetComponent<Pot>().brakePot();
         }
