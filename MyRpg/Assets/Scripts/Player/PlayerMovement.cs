@@ -15,6 +15,9 @@ public class PlayerMovement : MonoBehaviour
     #region Public vars
     [Header("Vars")]
     public float playerSpeed;
+    public float attackCooldown;
+    public FloatValue currentHealth;
+    public Signal playerHpSignal;
 
     [Header("Objects Ref")]
     public Rigidbody2D myRigidBody;
@@ -84,7 +87,7 @@ public class PlayerMovement : MonoBehaviour
         currentState = PlayerState.attack;
         yield return null;
         myAnimator.SetBool("isAttacking", false);
-        yield return new WaitForSeconds(.33f);
+        yield return new WaitForSeconds(attackCooldown);
         currentState = PlayerState.walk;
     }
 
@@ -99,9 +102,19 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    public void Knock(float knockTime)
+    public void Knock(float knockTime , float dmg)
     {
-        StartCoroutine(knockCo(knockTime));
+        currentHealth.runTimeValue -= dmg;
+        playerHpSignal.Rise();
+        if (currentHealth.runTimeValue > 0)
+        {
+            StartCoroutine(knockCo(knockTime));
+        }
+        else
+        {
+            Debug.Log("player death");
+            this.gameObject.SetActive(false);
+        }
     }
     #endregion
 }
