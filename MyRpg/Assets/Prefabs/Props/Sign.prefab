@@ -72,8 +72,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -307423829
-  m_SortingLayer: 2
-  m_SortingOrder: 0
+  m_SortingLayer: 1
+  m_SortingOrder: -1
   m_Sprite: {fileID: 4479181887894498110, guid: 451c565171e8ce24794223bcd56709b5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -149,7 +149,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d718b10030057340915f8838aad77b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  whatDoseTheSignSay: Hello
+  interactOn: {fileID: 11400000, guid: 8cadd1c3b69d0494ab7b8acc6c6b117d, type: 2}
+  interactOff: {fileID: 11400000, guid: 0b7e97ceea0ec184f97797f1282971e6, type: 2}
+  whatDoseTheSignSay: Closed under the Empires order
   dialogText: {fileID: 0}
   dialogBox: {fileID: 0}
   playerInRange: 0
