@@ -152,8 +152,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -307423829
   m_SortingLayer: 1
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 7152930139536384079, guid: 02735c65064f20242a5940ef6e086340, type: 3}
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 3445332486847661990, guid: 02735c65064f20242a5940ef6e086340, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -227,6 +227,7 @@ MonoBehaviour:
   attackCooldown: 0.2
   currentHealth: {fileID: 11400000, guid: 1c6af593bccbc154e932a52b434b483c, type: 2}
   playerHpSignal: {fileID: 11400000, guid: 83a41819d4248454595941c279cf9263, type: 2}
+  startPos: {fileID: 11400000, guid: be7c10eed8bf65f4e9b82e68687cc802, type: 2}
   myRigidBody: {fileID: 0}
   myAnimator: {fileID: 0}
   currentState: 0

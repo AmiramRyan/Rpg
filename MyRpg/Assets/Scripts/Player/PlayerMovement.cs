@@ -39,7 +39,7 @@ public class PlayerMovement : MonoBehaviour
         currentState = PlayerState.walk;
         myRigidBody = GetComponent<Rigidbody2D>();
         myAnimator = GetComponent<Animator>();
-        transform.position = startPos.initialValue;
+        transform.position = startPos.runTimeValue;
     }
 
 
