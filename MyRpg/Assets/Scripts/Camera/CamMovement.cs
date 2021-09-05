@@ -15,7 +15,8 @@ public class CamMovement : MonoBehaviour
 
     void Start()
     {
-        
+        Vector3 temp = new Vector3(target.position.x, target.position.y, transform.position.z);
+        transform.position = temp;
     }
 
     void LateUpdate()

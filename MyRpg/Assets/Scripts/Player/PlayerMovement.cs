@@ -18,6 +18,7 @@ public class PlayerMovement : MonoBehaviour
     public float attackCooldown;
     public FloatValue currentHealth;
     public Signal playerHpSignal;
+    public VectorValue startPos;
 
     [Header("Objects Ref")]
     public Rigidbody2D myRigidBody;
@@ -38,6 +39,7 @@ public class PlayerMovement : MonoBehaviour
         currentState = PlayerState.walk;
         myRigidBody = GetComponent<Rigidbody2D>();
         myAnimator = GetComponent<Animator>();
+        transform.position = startPos.initialValue;
     }
 
 
