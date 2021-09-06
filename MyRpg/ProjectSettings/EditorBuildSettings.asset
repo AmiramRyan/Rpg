@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/IntroHouseCeller.unity
     guid: 2cef3d3ede579aa46bde4171d26f41c3
+  - enabled: 1
+    path: Assets/Scenes/Dungeon01.unity
+    guid: 46c1ddda5099b2542a10c84ee76ca066
   m_configObjects: {}
