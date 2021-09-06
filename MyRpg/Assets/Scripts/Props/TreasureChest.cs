@@ -12,13 +12,13 @@ public class TreasureChest : Interactable
     public GameObject textBubble;
     public Text dialogText;
     private Animator chestAnim;
-    public bool activeChest;
+    
 
     void Start()
     {
         chestAnim = GetComponent<Animator>();
         isOpen = false;
-        activeChest = true;
+        activeObj = true;
     }
 
 
@@ -53,7 +53,7 @@ public class TreasureChest : Interactable
         isOpen = true;
         //context clue off
         clueSignal.Rise();
-        activeChest = false;
+        activeObj = false;
         chestAnim.SetBool("isOpen", true);
     }
     
@@ -63,7 +63,7 @@ public class TreasureChest : Interactable
             textBubble.SetActive(false);
             //rise signal to stop animating player
             getItemSignal.Rise();
-            activeChest = false;
+            activeObj = false;
     }
 
     public void OnTriggerEnter2D(Collider2D other)
@@ -72,7 +72,7 @@ public class TreasureChest : Interactable
         {
             if (!playerInRange)
             {
-                if (activeChest)
+                if (activeObj)
                 {
                     clueSignal.Rise();
                 }
@@ -87,7 +87,7 @@ public class TreasureChest : Interactable
         {
             if (playerInRange)
             {
-                if (activeChest)
+                if (activeObj)
                 {
                     clueSignal.Rise();
                 }

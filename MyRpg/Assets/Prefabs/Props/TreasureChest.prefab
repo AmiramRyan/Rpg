@@ -171,10 +171,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerInRange: 0
   clueSignal: {fileID: 11400000, guid: 4b3c29b15de5b334cb556390899e42e2, type: 2}
+  activeObj: 0
   playerInv: {fileID: 11400000, guid: a90d2002ff034e2488ab59347d39205b, type: 2}
   contents: {fileID: 11400000, guid: d780a924d46278b4b91c8286fef028ca, type: 2}
   isOpen: 0
   getItemSignal: {fileID: 11400000, guid: ac4f4caec8335bf408e48198c6515ceb, type: 2}
   textBubble: {fileID: 0}
   dialogText: {fileID: 0}
-  activeChest: 0
