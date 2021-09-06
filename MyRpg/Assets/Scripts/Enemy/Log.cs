@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Log : Enemy
 {
-    private Rigidbody2D myRb;
+    public Rigidbody2D myRb;
     public Transform target;
     public float cheseRadius;
     public float attackRadius;
@@ -23,6 +23,7 @@ public class Log : Enemy
         myRb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         target = GameObject.FindWithTag("Player").transform;
+        anim.SetBool("isAwake", true);
     }
 
 
@@ -32,7 +33,7 @@ public class Log : Enemy
     }
 
 
-    void CheckDist()
+    public virtual void CheckDist()
     {
         if(Vector3.Distance(target.position, transform.position) <= cheseRadius
             && Vector3.Distance(target.position, transform.position) > attackRadius)
@@ -55,7 +56,7 @@ public class Log : Enemy
 
 
     #region Animations
-    private void changeAnimation(Vector2 direction)
+    public void changeAnimation(Vector2 direction)
     {
         if(Mathf.Abs(direction.x) > Mathf.Abs(direction.y))
         {
