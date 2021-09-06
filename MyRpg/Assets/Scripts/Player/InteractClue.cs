@@ -5,14 +5,19 @@ using UnityEngine;
 public class InteractClue : MonoBehaviour
 {
     public GameObject interactBox;
+    public bool interactActive = false;
+    
 
-    public void Enable()
+    public void changeContext()
     {
-        interactBox.SetActive(true);
-    }
-
-    public void Disable() 
-    {
-        interactBox.SetActive(false);
+        interactActive = !interactActive;
+        if (interactActive)
+        {
+            interactBox.SetActive(true);
+        }
+        else
+        {
+            interactBox.SetActive(false);
+        }
     }
 }

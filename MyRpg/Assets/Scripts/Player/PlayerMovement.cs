@@ -23,6 +23,8 @@ public class PlayerMovement : MonoBehaviour
     [Header("Objects Ref")]
     public Rigidbody2D myRigidBody;
     public Animator myAnimator;
+    public Inventory playerInventory;
+    public SpriteRenderer receiveItemSprite;
 
     public PlayerState currentState;
 
@@ -45,6 +47,10 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (currentState == PlayerState.interact)
+        {
+            return; //dont do anything
+        }
         change = Vector3.zero;
         change.x = Input.GetAxisRaw("Horizontal");
         change.y = Input.GetAxisRaw("Vertical");
@@ -55,6 +61,11 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        //Player interactions
+        if(currentState == PlayerState.interact)
+        {
+            return; //dont do anything
+        }
         if (Input.GetButtonDown("attack") && currentState != PlayerState.attack && currentState != PlayerState.stagger)
         {
             StartCoroutine(AttackCo());
@@ -90,7 +101,10 @@ public class PlayerMovement : MonoBehaviour
         yield return null;
         myAnimator.SetBool("isAttacking", false);
         yield return new WaitForSeconds(attackCooldown);
-        currentState = PlayerState.walk;
+        if (currentState != PlayerState.interact)
+        {
+            currentState = PlayerState.walk;
+        }
     }
 
     private IEnumerator knockCo(float knockTime)
@@ -119,4 +133,24 @@ public class PlayerMovement : MonoBehaviour
         }
     }
     #endregion
+
+    public void GetItems()
+    {
+        if (playerInventory.currentItem != null)
+        {
+            if (currentState != PlayerState.interact)
+            {
+                myAnimator.SetBool("isHoldingItem", true);
+                currentState = PlayerState.interact;
+                receiveItemSprite.sprite = playerInventory.currentItem.itemSprite;
+            }
+            else
+            {
+                myAnimator.SetBool("isHoldingItem", false);
+                currentState = PlayerState.idle;
+                receiveItemSprite.sprite = null;
+                playerInventory.currentItem = null;
+            }
+        }
+    }
 }

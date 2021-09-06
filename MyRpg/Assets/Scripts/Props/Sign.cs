@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Sign : MonoBehaviour
+public class Sign : Interactable
 {
-    public Signal interactOn;
-    public Signal interactOff;
+    
     public string whatDoseTheSignSay;
     public Text dialogText;
     public GameObject dialogBox;
-    public bool playerInRange;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,26 +32,15 @@ public class Sign : MonoBehaviour
                     dialogText.text = whatDoseTheSignSay;
                 }
             }
-
-
-    }
-
-    private void OnTriggerEnter2D(Collider2D other)
+    }  
+    public void OnTriggerExit2D(Collider2D other)
     {
+        base.OnTriggerExit2D(other);
         if (other.CompareTag("Player") && other.isTrigger)
         {
-            playerInRange = true;
-            interactOn.Rise();
+                dialogBox.SetActive(false);
         }
+        
     }
-
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        if (other.CompareTag("Player") && other.isTrigger)
-        {
-            playerInRange = false;
-            dialogBox.SetActive(false);
-            interactOff.Rise();
-        }
-    }
+    
 }
