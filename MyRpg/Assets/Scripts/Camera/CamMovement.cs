@@ -13,8 +13,17 @@ public class CamMovement : MonoBehaviour
     public Vector2 maxPos; //set it up dynamicly based on the room size
     public Vector2 minPos; // down the devroad
 
+    public Animator camAnim;
+
+    [Header("Position resets")]
+    public VectorValue camMin;
+    public VectorValue camMax;
+
     void Start()
     {
+        maxPos = camMax.initialValue;
+        minPos = camMin.initialValue;
+        camAnim = GetComponent<Animator>();
         Vector3 temp = new Vector3(target.position.x, target.position.y, transform.position.z);
         transform.position = temp;
     }
@@ -30,5 +39,15 @@ public class CamMovement : MonoBehaviour
         }
     }
 
+    public void ScreenKick()
+    {
+        camAnim.SetBool("screenKick", true);
+        StartCoroutine(KickCo());
+    }
 
+    public IEnumerator KickCo()
+    {
+        yield return null;
+        camAnim.SetBool("screenKick", false);
+    }
 }

@@ -25,6 +25,7 @@ public class PlayerMovement : MonoBehaviour
     public Animator myAnimator;
     public Inventory playerInventory;
     public SpriteRenderer receiveItemSprite;
+    public Signal playerHit;
 
     public PlayerState currentState;
 
@@ -41,7 +42,7 @@ public class PlayerMovement : MonoBehaviour
         currentState = PlayerState.walk;
         myRigidBody = GetComponent<Rigidbody2D>();
         myAnimator = GetComponent<Animator>();
-        transform.position = startPos.runTimeValue;
+        transform.position = startPos.defaultValue;
     }
 
 
@@ -109,6 +110,7 @@ public class PlayerMovement : MonoBehaviour
 
     private IEnumerator knockCo(float knockTime)
     {
+        playerHit.Rise();
         if (myRigidBody != null)
         {
             yield return new WaitForSeconds(knockTime);

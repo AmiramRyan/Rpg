@@ -9,8 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac0130079d4acfd488f20c3f96ab9494, type: 3}
-  m_Name: MaxCamera
+  m_Script: {fileID: 11500000, guid: 0a66c321119fa17448d89e01a5748c1a, type: 3}
+  m_Name: ScreenKickSignel
   m_EditorClassIdentifier: 
-  initialValue: {x: 12, y: 7}
-  runTimeValue: {x: 12, y: 7}
+  listenersArr: []

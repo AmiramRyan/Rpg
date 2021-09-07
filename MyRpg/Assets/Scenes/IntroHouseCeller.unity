@@ -5113,6 +5113,26 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1175218169, guid: b001cbffec4db264caba64612452a4a3, type: 3}
+      propertyPath: fadeTime
+      value: 0.33
+      objectReference: {fileID: 0}
+    - target: {fileID: 1175218169, guid: b001cbffec4db264caba64612452a4a3, type: 3}
+      propertyPath: cameraMax
+      value: 
+      objectReference: {fileID: 11400000, guid: ed8808d384a9adf4794ff3c9566787b9, type: 2}
+    - target: {fileID: 1175218169, guid: b001cbffec4db264caba64612452a4a3, type: 3}
+      propertyPath: cameraMin
+      value: 
+      objectReference: {fileID: 11400000, guid: 4e5194b6ea067a745b2a95fbfac8f7db, type: 2}
+    - target: {fileID: 1175218169, guid: b001cbffec4db264caba64612452a4a3, type: 3}
+      propertyPath: fadePanel
+      value: 
+      objectReference: {fileID: 7153505548092268944, guid: 6620e22c93818d74e84f7beee52d72df, type: 3}
+    - target: {fileID: 1175218169, guid: b001cbffec4db264caba64612452a4a3, type: 3}
+      propertyPath: fadeOutPanel
+      value: 
+      objectReference: {fileID: 7230229670196141249, guid: 95b37d941179b2640ad547a81d783ec0, type: 3}
+    - target: {fileID: 1175218169, guid: b001cbffec4db264caba64612452a4a3, type: 3}
       propertyPath: newPlayerPos.x
       value: -4.99
       objectReference: {fileID: 0}

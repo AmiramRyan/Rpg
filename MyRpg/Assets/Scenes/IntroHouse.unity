@@ -2384,6 +2384,26 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1175218169, guid: b001cbffec4db264caba64612452a4a3, type: 3}
+      propertyPath: fadeTime
+      value: 0.33
+      objectReference: {fileID: 0}
+    - target: {fileID: 1175218169, guid: b001cbffec4db264caba64612452a4a3, type: 3}
+      propertyPath: cameraMax
+      value: 
+      objectReference: {fileID: 11400000, guid: d753a4ada73f17047a4ff177c6e67632, type: 2}
+    - target: {fileID: 1175218169, guid: b001cbffec4db264caba64612452a4a3, type: 3}
+      propertyPath: cameraMin
+      value: 
+      objectReference: {fileID: 11400000, guid: 0e23a2fb9a1fc4b47a8c3522d32985ba, type: 2}
+    - target: {fileID: 1175218169, guid: b001cbffec4db264caba64612452a4a3, type: 3}
+      propertyPath: fadePanel
+      value: 
+      objectReference: {fileID: 7153505548092268944, guid: 6620e22c93818d74e84f7beee52d72df, type: 3}
+    - target: {fileID: 1175218169, guid: b001cbffec4db264caba64612452a4a3, type: 3}
+      propertyPath: fadeOutPanel
+      value: 
+      objectReference: {fileID: 7230229670196141249, guid: 95b37d941179b2640ad547a81d783ec0, type: 3}
+    - target: {fileID: 1175218169, guid: b001cbffec4db264caba64612452a4a3, type: 3}
       propertyPath: newPlayerPos.x
       value: -6
       objectReference: {fileID: 0}
@@ -5163,6 +5183,42 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1175218169, guid: b001cbffec4db264caba64612452a4a3, type: 3}
+      propertyPath: fadeTime
+      value: 0.33
+      objectReference: {fileID: 0}
+    - target: {fileID: 1175218169, guid: b001cbffec4db264caba64612452a4a3, type: 3}
+      propertyPath: cameraMax
+      value: 
+      objectReference: {fileID: 11400000, guid: d753a4ada73f17047a4ff177c6e67632, type: 2}
+    - target: {fileID: 1175218169, guid: b001cbffec4db264caba64612452a4a3, type: 3}
+      propertyPath: cameraMin
+      value: 
+      objectReference: {fileID: 11400000, guid: 0e23a2fb9a1fc4b47a8c3522d32985ba, type: 2}
+    - target: {fileID: 1175218169, guid: b001cbffec4db264caba64612452a4a3, type: 3}
+      propertyPath: fadePanel
+      value: 
+      objectReference: {fileID: 7153505548092268944, guid: 6620e22c93818d74e84f7beee52d72df, type: 3}
+    - target: {fileID: 1175218169, guid: b001cbffec4db264caba64612452a4a3, type: 3}
+      propertyPath: fadeOutPanel
+      value: 
+      objectReference: {fileID: 7230229670196141249, guid: 95b37d941179b2640ad547a81d783ec0, type: 3}
+    - target: {fileID: 1175218169, guid: b001cbffec4db264caba64612452a4a3, type: 3}
+      propertyPath: cameraNewMax.x
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1175218169, guid: b001cbffec4db264caba64612452a4a3, type: 3}
+      propertyPath: cameraNewMax.y
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1175218169, guid: b001cbffec4db264caba64612452a4a3, type: 3}
+      propertyPath: cameraNewMin.x
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1175218169, guid: b001cbffec4db264caba64612452a4a3, type: 3}
+      propertyPath: cameraNewMin.y
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 1175218169, guid: b001cbffec4db264caba64612452a4a3, type: 3}
       propertyPath: newPlayerPos.x
       value: 10.48

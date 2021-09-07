@@ -347,6 +347,7 @@ MonoBehaviour:
   myAnimator: {fileID: 0}
   playerInventory: {fileID: 11400000, guid: a90d2002ff034e2488ab59347d39205b, type: 2}
   receiveItemSprite: {fileID: 1836297924}
+  playerHit: {fileID: 11400000, guid: 91db6bfbcbf0e4d45900f70b46f1df8d, type: 2}
   currentState: 0
 --- !u!95 &6884080907329561932
 Animator:

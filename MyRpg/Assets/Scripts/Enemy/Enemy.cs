@@ -11,11 +11,15 @@ public enum EnemyState{
 public class Enemy : MonoBehaviour
 {
     public EnemyState currentState;
+
+    [Header("Vars")]
     public float speed;
     public int dmg;
     public string enemyName;
-    public FloatValue maxHealth;
     public float hitPoints;
+    public FloatValue maxHealth;
+
+    [Header("Effects")]
     public GameObject deathEffect;
     public float effectTimeToLive;
 

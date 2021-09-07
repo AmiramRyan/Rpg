@@ -7,14 +7,12 @@ public class VectorValue : ScriptableObject, ISerializationCallbackReceiver
 {
     //5.493517 -3.630581 celler start room
     // Start is called before the first frame update
-    public Vector2 initialValue;
-
-    [HideInInspector]
-    public Vector2 runTimeValue;
+    public Vector2 initialValue; //runtime
+    public Vector2 defaultValue; // on start
 
     public void OnAfterDeserialize()
     {
-        runTimeValue = initialValue;
+        initialValue = defaultValue;
     }
 
     public void OnBeforeSerialize()
