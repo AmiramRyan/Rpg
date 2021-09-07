@@ -14,8 +14,10 @@ public class Door_Key : Door
             {
                 if (playerInv.numOfKeys > 0)
                 {
+                    clueSignal.Rise();
                     playerInv.numOfKeys--;
                     OpenDoor();
+                    activeObj = false;
                 }
             }
             else
@@ -25,16 +27,4 @@ public class Door_Key : Door
         }
     }
 
-    public void OnTriggerEnter2D(Collider2D other)
-    {
-        if (!playerInRange)
-        {
-            if (other.CompareTag("Player") && other.isTrigger)
-            {
-                clueSignal.Rise();
-                playerInRange = true;
-                
-            }
-        }
-    }
 }

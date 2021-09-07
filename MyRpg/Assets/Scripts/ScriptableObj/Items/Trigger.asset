@@ -9,9 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 34e343aa01f953b4cae7389a00c18ab3, type: 3}
-  m_Name: PlayerInventory
+  m_Script: {fileID: 11500000, guid: 5f5d916b1539da342919a7925bf3c317, type: 3}
+  m_Name: Trigger
   m_EditorClassIdentifier: 
-  currentItem: {fileID: 0}
-  inventoryList: []
-  numOfKeys: 4
+  initialValue: 0

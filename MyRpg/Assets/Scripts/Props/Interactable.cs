@@ -19,7 +19,10 @@ public class Interactable : MonoBehaviour
         {
             if (other.CompareTag("Player") && other.isTrigger)
             {
-                clueSignal.Rise();
+                if (activeObj)
+                {
+                    clueSignal.Rise();
+                }
                 playerInRange = true;
             }
         }
@@ -31,7 +34,10 @@ public class Interactable : MonoBehaviour
         {
             if (other.CompareTag("Player") && other.isTrigger)
             {
-                clueSignal.Rise();
+                if (activeObj)
+                {
+                    clueSignal.Rise();
+                }
                 playerInRange = false;
             }
         }

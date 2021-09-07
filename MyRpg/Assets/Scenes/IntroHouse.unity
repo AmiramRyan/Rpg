@@ -2383,6 +2383,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1175218169, guid: b001cbffec4db264caba64612452a4a3, type: 3}
+      propertyPath: newPlayerPos.x
+      value: -6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1175218169, guid: b001cbffec4db264caba64612452a4a3, type: 3}
+      propertyPath: newPlayerPos.y
+      value: 4.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1175218169, guid: b001cbffec4db264caba64612452a4a3, type: 3}
+      propertyPath: sceneNameToLoad
+      value: IntroHouseCeller
+      objectReference: {fileID: 0}
     - target: {fileID: 802029601027331089, guid: b001cbffec4db264caba64612452a4a3, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -2449,26 +2461,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b001cbffec4db264caba64612452a4a3, type: 3}
---- !u!1 &1015798494 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7743786767687105037, guid: b001cbffec4db264caba64612452a4a3, type: 3}
-  m_PrefabInstance: {fileID: 1015798493}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1015798495
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1015798494}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 414e560ffc0ebad4a89c884caee1d5fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sceneNameToLoad: IntroHouseCeller
-  newPlayerPos: {x: -6, y: 4.8}
-  oldPlayerPos: {fileID: 11400000, guid: be7c10eed8bf65f4e9b82e68687cc802, type: 2}
 --- !u!1 &1513967049
 GameObject:
   m_ObjectHideFlags: 0
@@ -5171,6 +5163,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1175218169, guid: b001cbffec4db264caba64612452a4a3, type: 3}
+      propertyPath: newPlayerPos.x
+      value: 10.48
+      objectReference: {fileID: 0}
+    - target: {fileID: 1175218169, guid: b001cbffec4db264caba64612452a4a3, type: 3}
+      propertyPath: newPlayerPos.y
+      value: 3.22
+      objectReference: {fileID: 0}
+    - target: {fileID: 1175218169, guid: b001cbffec4db264caba64612452a4a3, type: 3}
+      propertyPath: sceneNameToLoad
+      value: OverWorld
+      objectReference: {fileID: 0}
     - target: {fileID: 802029601027331089, guid: b001cbffec4db264caba64612452a4a3, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -5237,23 +5241,3 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b001cbffec4db264caba64612452a4a3, type: 3}
---- !u!1 &7174285186575323384 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7743786767687105037, guid: b001cbffec4db264caba64612452a4a3, type: 3}
-  m_PrefabInstance: {fileID: 7174285186575323383}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &7174285186575323385
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7174285186575323384}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 414e560ffc0ebad4a89c884caee1d5fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sceneNameToLoad: OverWorld
-  newPlayerPos: {x: 10.48, y: 3.22}
-  oldPlayerPos: {fileID: 11400000, guid: be7c10eed8bf65f4e9b82e68687cc802, type: 2}
