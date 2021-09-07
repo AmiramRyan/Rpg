@@ -11,11 +11,6 @@ public class Sign : Interactable
     public GameObject dialogBox;
 
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        playerInRange = false;
-    }
 
     // Update is called once per frame
     void Update()
@@ -35,12 +30,18 @@ public class Sign : Interactable
     }  
     public void OnTriggerExit2D(Collider2D other)
     {
-        base.OnTriggerExit2D(other);
-        if (other.CompareTag("Player") && other.isTrigger)
+        if (playerInRange)
         {
+            if (other.CompareTag("Player") && other.isTrigger)
+            {
+                if (activeObj)
+                {
+                    clueSignal.Rise();
+                }
+                playerInRange = false;
                 dialogBox.SetActive(false);
+            }
         }
-        
     }
     
 }
