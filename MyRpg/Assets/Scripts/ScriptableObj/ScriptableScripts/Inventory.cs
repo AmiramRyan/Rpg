@@ -8,6 +8,9 @@ public class Inventory : ScriptableObject
     public Item currentItem;
     public List<Item> inventoryList = new List<Item>();
     public int numOfKeys;
+    public int coins;
+
+    
 
     public void AddToInv(Item itemToAdd)
     {
@@ -24,4 +27,6 @@ public class Inventory : ScriptableObject
             }
         }
     }
+
+    
 }
