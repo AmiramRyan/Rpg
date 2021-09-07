@@ -16,6 +16,8 @@ public class Enemy : MonoBehaviour
     public string enemyName;
     public FloatValue maxHealth;
     public float hitPoints;
+    public GameObject deathEffect;
+    public float effectTimeToLive;
 
     private void Awake()
     {
@@ -28,6 +30,7 @@ public class Enemy : MonoBehaviour
         if (hitPoints <= 0)
         {
             //die animations
+            playDeathEffect();
             //spawn loot randomly
             //destroy obj
             Debug.Log("I am dead :(");
@@ -49,6 +52,17 @@ public class Enemy : MonoBehaviour
             myRb.velocity = Vector2.zero;
             currentState = EnemyState.idle;
             myRb.velocity = Vector2.zero;
+        }
+    }
+
+    public void playDeathEffect()
+    {
+        if(deathEffect != null)
+        {
+            Debug.Log("animtaionStart");
+            GameObject effect = Instantiate(deathEffect, transform.position, Quaternion.identity);
+            Destroy(effect, effectTimeToLive);
+            Debug.Log("animtaionEnd");
         }
     }
 }

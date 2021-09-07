@@ -6,10 +6,11 @@ public class Interactable : MonoBehaviour
 {
     public bool playerInRange;
     public Signal clueSignal;
+    public bool activeObj;
     // Start is called before the first frame update
     void Start()
     {
-        
+        activeObj = true;
     }
 
     public void OnTriggerEnter2D(Collider2D other)
@@ -18,7 +19,10 @@ public class Interactable : MonoBehaviour
         {
             if (other.CompareTag("Player") && other.isTrigger)
             {
-                clueSignal.Rise();
+                if (activeObj)
+                {
+                    clueSignal.Rise();
+                }
                 playerInRange = true;
             }
         }
@@ -30,7 +34,10 @@ public class Interactable : MonoBehaviour
         {
             if (other.CompareTag("Player") && other.isTrigger)
             {
-                clueSignal.Rise();
+                if (activeObj)
+                {
+                    clueSignal.Rise();
+                }
                 playerInRange = false;
             }
         }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CamMovement : MonoBehaviour
 {
@@ -9,7 +10,6 @@ public class CamMovement : MonoBehaviour
 
     [Header("Cam controls")]
     public float smoothOffset;
-
     public Vector2 maxPos; //set it up dynamicly based on the room size
     public Vector2 minPos; // down the devroad
 
@@ -29,4 +29,6 @@ public class CamMovement : MonoBehaviour
             transform.position = Vector3.Lerp(transform.position, tempTarget, smoothOffset);
         }
     }
+
+
 }

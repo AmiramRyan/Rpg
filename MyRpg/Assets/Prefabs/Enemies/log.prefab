@@ -124,7 +124,10 @@ MonoBehaviour:
   dmg: 1
   enemyName: Ms. Log
   maxHealth: {fileID: 11400000, guid: 5ffd1b081b1703a40a9ea4de51f717d8, type: 2}
-  hitPoints: 2
+  hitPoints: 1
+  deathEffect: {fileID: 7820588365489165176, guid: 9d84d9bbd561bf3479a6a12b74a7497a, type: 3}
+  effectTimeToLive: 0.8
+  myRb: {fileID: 0}
   target: {fileID: 0}
   cheseRadius: 4
   attackRadius: 0.8

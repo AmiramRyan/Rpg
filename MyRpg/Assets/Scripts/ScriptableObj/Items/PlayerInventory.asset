@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentItem: {fileID: 0}
   inventoryList: []
-  numOfKeys: 0
+  numOfKeys: 4
