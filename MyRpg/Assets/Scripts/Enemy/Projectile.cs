@@ -11,6 +11,7 @@ public class Projectile : MonoBehaviour
     public Rigidbody2D myRb;
     void Start()
     {
+        //
         lifeTimeSec = lifeTime;
         myRb = GetComponent<Rigidbody2D>();
     }
@@ -25,13 +26,16 @@ public class Projectile : MonoBehaviour
         }
     }
 
-    public void Fire(Vector2 direction)
+    public void Fire(Vector3 direction)
     {
         myRb.velocity = direction * speed;
     }
 
     public void OnTriggerEnter2D(Collider2D other)
     {
-        Destroy(this.gameObject);
+        if (!other.CompareTag("Room"))
+        {
+            Destroy(this.gameObject);
+        }
     }
 }

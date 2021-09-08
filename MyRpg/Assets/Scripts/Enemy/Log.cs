@@ -8,7 +8,6 @@ public class Log : Enemy
     public Transform target;
     public float cheseRadius; //from where do i start chasing target
     public float attackRadius; //how close shlould i get to the target
-    public Transform homePosition;
     public Animator anim;
     public void ChangeState(EnemyState newState)
     {
@@ -56,7 +55,7 @@ public class Log : Enemy
 
 
     #region Animations
-    public void changeAnimation(Vector2 direction)
+    public virtual void changeAnimation(Vector2 direction)
     {
         if(Mathf.Abs(direction.x) > Mathf.Abs(direction.y))
         {
@@ -79,13 +78,10 @@ public class Log : Enemy
                 setFloatAnim(Vector2.down);
             }
         }
-        /*direction = direction.normalized; working 
-        anim.SetFloat("moveX", direction.x);
-        anim.SetFloat("moveY", direction.y);*/
     }
 
 
-    public void setFloatAnim(Vector2 direction)
+    public  void setFloatAnim(Vector2 direction)
     {
         anim.SetFloat("moveX", direction.x);
         anim.SetFloat("moveY", direction.y);

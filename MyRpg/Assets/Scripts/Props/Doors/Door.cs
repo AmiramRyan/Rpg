@@ -30,10 +30,14 @@ public abstract class Door : Interactable
         //setrigidBody to inactive
         myRb.enabled = false;
         mySpr.sprite = openSprite;
-
     }
+
+
     public virtual void CloseDoor()
     {
-
+        isOpen = false;
+        myRb.enabled = true;
+        mySpr.sprite = closeSprite;
     }
+
 }

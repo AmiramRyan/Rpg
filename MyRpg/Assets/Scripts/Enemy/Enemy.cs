@@ -18,16 +18,23 @@ public class Enemy : MonoBehaviour
     public string enemyName;
     public float hitPoints;
     public FloatValue maxHealth;
+    public Vector2 homePosition;
 
     [Header("Effects")]
     public GameObject deathEffect;
     public float effectTimeToLive;
+
+    public Signal roomSignal;
 
     private void Awake()
     {
         hitPoints = maxHealth.initialValue;
     }
 
+    private void OnEnable()
+    {
+        //transform.position = homePosition;
+    }
     private void TakeDmg(float dmg)
     {
         hitPoints -= dmg;
@@ -37,7 +44,6 @@ public class Enemy : MonoBehaviour
             playDeathEffect();
             //spawn loot randomly
             //destroy obj
-            Debug.Log("I am dead :(");
             this.gameObject.SetActive(false); // for debugging 
         }
     }
@@ -61,12 +67,14 @@ public class Enemy : MonoBehaviour
 
     public void playDeathEffect()
     {
-        if(deathEffect != null)
+        if (roomSignal != null)
         {
-            Debug.Log("animtaionStart");
+            roomSignal.Rise();
+        }
+        if (deathEffect != null)
+        {
             GameObject effect = Instantiate(deathEffect, transform.position, Quaternion.identity);
             Destroy(effect, effectTimeToLive);
-            Debug.Log("animtaionEnd");
         }
     }
 }

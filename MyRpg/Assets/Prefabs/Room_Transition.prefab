@@ -72,3 +72,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   camShift: {x: 0, y: 0}
   playerShift: {x: 0, y: 0, z: 0}
+  needText: 0
+  placeName: 
+  textBox: {fileID: 0}
+  text: {fileID: 0}
+  placeTextLifeTime: 0

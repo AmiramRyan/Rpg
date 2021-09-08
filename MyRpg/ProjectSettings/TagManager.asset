@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - EnemyHitBox
   - PlayerAttackHitBox
+  - Room
   layers:
   - Default
   - TransparentFX
