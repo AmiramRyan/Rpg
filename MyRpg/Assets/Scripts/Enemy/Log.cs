@@ -6,11 +6,11 @@ public class Log : Enemy
 {
     public Rigidbody2D myRb;
     public Transform target;
-    public float cheseRadius;
-    public float attackRadius;
+    public float cheseRadius; //from where do i start chasing target
+    public float attackRadius; //how close shlould i get to the target
     public Transform homePosition;
     public Animator anim;
-    private void ChangeState(EnemyState newState)
+    public void ChangeState(EnemyState newState)
     {
         if (currentState != newState)
         {
@@ -85,7 +85,7 @@ public class Log : Enemy
     }
 
 
-    private void setFloatAnim(Vector2 direction)
+    public void setFloatAnim(Vector2 direction)
     {
         anim.SetFloat("moveX", direction.x);
         anim.SetFloat("moveY", direction.y);

@@ -44,7 +44,7 @@ SpriteAtlas:
     variantMultiplier: 1
     packables:
     - {fileID: 102900000, guid: 567a1fd0350ffdb43bdaf3702d5b8514, type: 3}
-    totalSpriteSurfaceArea: 624124
+    totalSpriteSurfaceArea: 620899
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
@@ -1631,6 +1631,9 @@ SpriteAtlas:
   - {fileID: -1760756981417539202, guid: 5b60001eedde5d3428904f61b2a056d0, type: 3}
   - {fileID: 8626818278983215672, guid: 5b60001eedde5d3428904f61b2a056d0, type: 3}
   - {fileID: 228074669703589773, guid: 5b60001eedde5d3428904f61b2a056d0, type: 3}
+  - {fileID: -2639854583086408205, guid: 5b60001eedde5d3428904f61b2a056d0, type: 3}
+  - {fileID: 4391973271103909417, guid: 5b60001eedde5d3428904f61b2a056d0, type: 3}
+  - {fileID: 1702683679510850378, guid: 5b60001eedde5d3428904f61b2a056d0, type: 3}
   - {fileID: -6050296909894318094, guid: 5b60001eedde5d3428904f61b2a056d0, type: 3}
   - {fileID: -6429866276832845431, guid: 5b60001eedde5d3428904f61b2a056d0, type: 3}
   - {fileID: -3727842135710763035, guid: 5b60001eedde5d3428904f61b2a056d0, type: 3}
@@ -1688,6 +1691,7 @@ SpriteAtlas:
   - {fileID: 538826285080647454, guid: 5b60001eedde5d3428904f61b2a056d0, type: 3}
   - {fileID: 1107736971085435061, guid: 5b60001eedde5d3428904f61b2a056d0, type: 3}
   - {fileID: -377563455374678323, guid: 5b60001eedde5d3428904f61b2a056d0, type: 3}
+  - {fileID: -76596165655313214, guid: 5b60001eedde5d3428904f61b2a056d0, type: 3}
   - {fileID: -464034680190023423, guid: 25abbd3e898693e43b691871828a29d8, type: 3}
   - {fileID: -6069640938520168933, guid: 25abbd3e898693e43b691871828a29d8, type: 3}
   - {fileID: 1999647984331235364, guid: 25abbd3e898693e43b691871828a29d8, type: 3}
@@ -3533,6 +3537,9 @@ SpriteAtlas:
   - objects_122
   - objects_121
   - objects_120
+  - RockPar3
+  - RockPar2
+  - RockPar1
   - objects_17
   - objects_48
   - objects_16
@@ -3590,6 +3597,7 @@ SpriteAtlas:
   - objects_119
   - objects_109
   - objects_108
+  - RockProjectile1
   - Inner_48
   - Inner_49
   - Inner_28
