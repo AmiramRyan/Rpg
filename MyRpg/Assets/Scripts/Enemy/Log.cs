@@ -28,7 +28,8 @@ public class Log : Enemy
     public override void OnEnable()
     {
         base.OnEnable();
-        currentState = EnemyState.walk;
+        currentState = EnemyState.idle;
+        this.transform.position = homePosition;
     }
 
     void FixedUpdate()

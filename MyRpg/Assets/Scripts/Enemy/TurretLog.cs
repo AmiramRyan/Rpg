@@ -18,6 +18,13 @@ public class TurretLog : Log
         fireReady = true;
     }
 
+    public override void OnEnable()
+    {
+        base.OnEnable();
+        currentState = EnemyState.idle;
+        this.transform.position = homePosition;
+    }
+
     private void Update()
     {
         fireCooldownSec -= Time.deltaTime;

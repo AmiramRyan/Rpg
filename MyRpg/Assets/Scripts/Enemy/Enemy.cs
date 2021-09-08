@@ -34,6 +34,7 @@ public class Enemy : MonoBehaviour
     public virtual void OnEnable()
     {
         hitPoints = maxHealth.initialValue;
+        this.transform.position = homePosition;
     }
     private void TakeDmg(float dmg)
     {
