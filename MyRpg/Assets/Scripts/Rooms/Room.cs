@@ -6,6 +6,7 @@ public class Room : MonoBehaviour
 {
     public Enemy[] enemiesArr;
     public Pot[] potsArr;
+    public GameObject virtualCam;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +23,7 @@ public class Room : MonoBehaviour
     {
         if(other.CompareTag("Player") && !other.isTrigger)
         {
+
             //enable arrays
             for(int i = 0; i< enemiesArr.Length; i++)
             {
@@ -31,6 +33,7 @@ public class Room : MonoBehaviour
             {
                 ChangeActive(potsArr[i], true);
             }
+            virtualCam.SetActive(true);
         }
     }
 
@@ -48,6 +51,7 @@ public class Room : MonoBehaviour
                 ChangeActive(potsArr[i], false);
             }
         }
+        virtualCam.SetActive(false);
     }
 
     public void ChangeActive(Component component,bool activation)

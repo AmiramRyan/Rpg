@@ -5,7 +5,6 @@ using UnityEngine;
 public class EnemyRoom : DungeonRoom
 {
     public Door[] doorsToInteract;
-    public RoomTransition[] deactivateTransitions;
     
     public void CheckRoomClear() //itrate enemies array to see if all have been defeated
     {
@@ -33,9 +32,26 @@ public class EnemyRoom : DungeonRoom
                 ChangeActive(potsArr[i], true);
             }
             CloseAllDoors();
+            virtualCam.SetActive(true);
         }
     }
 
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("Player") && !other.isTrigger)
+        {
+            //dissable arrays
+            for (int i = 0; i < enemiesArr.Length; i++)
+            {
+                ChangeActive(enemiesArr[i], false);
+            }
+            for (int i = 0; i < potsArr.Length; i++)
+            {
+                ChangeActive(potsArr[i], false);
+            }
+        }
+        virtualCam.SetActive(false);
+    }
 
 
     public void OpenAllDoors()
@@ -45,10 +61,6 @@ public class EnemyRoom : DungeonRoom
             doorsToInteract[i].OpenDoor();
         }
 
-        for(int i =0; i<deactivateTransitions.Length; i++)
-        {
-            deactivateTransitions[i].gameObject.SetActive(true);
-        }
     }
 
     public void CloseAllDoors()
@@ -58,9 +70,5 @@ public class EnemyRoom : DungeonRoom
             doorsToInteract[i].CloseDoor();
         }
 
-        for (int i = 0; i < deactivateTransitions.Length; i++)
-        {
-            deactivateTransitions[i].gameObject.SetActive(false);
-        }
     }
 }
