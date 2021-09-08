@@ -8,18 +8,28 @@ public class EnemyRoom : DungeonRoom
     
     public void CheckRoomClear() //itrate enemies array to see if all have been defeated
     {
-        for(int i =0; i<enemiesArr.Length-1; i++)
+        if (EnemiesActive() == 1)
         {
-            if(enemiesArr[i].gameObject.activeInHierarchy && i < enemiesArr.Length -1)
+            OpenAllDoors();
+        }
+    }
+    public int EnemiesActive()
+    {
+        int activeEnemies = 0;
+        for (int i = 0; i < enemiesArr.Length; i++)
+        {
+            if (enemiesArr[i].gameObject.activeInHierarchy)
             {
-                return;
+                activeEnemies++;
             }
         }
-        OpenAllDoors();
+        return activeEnemies;
     }
 
+    
     private void OnTriggerEnter2D(Collider2D other)
     {
+        
         if (other.CompareTag("Player") && !other.isTrigger)
         {
             //enable arrays
@@ -49,8 +59,8 @@ public class EnemyRoom : DungeonRoom
             {
                 ChangeActive(potsArr[i], false);
             }
+            virtualCam.SetActive(false);
         }
-        virtualCam.SetActive(false);
     }
 
 

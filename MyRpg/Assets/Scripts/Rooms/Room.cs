@@ -19,11 +19,11 @@ public class Room : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    public void OnTriggerEnter2D(Collider2D other)
     {
         if(other.CompareTag("Player") && !other.isTrigger)
         {
-
+            Debug.Log("EnterRoom");
             //enable arrays
             for(int i = 0; i< enemiesArr.Length; i++)
             {
@@ -37,10 +37,11 @@ public class Room : MonoBehaviour
         }
     }
 
-    private void OnTriggerExit2D(Collider2D other)
+    public void OnTriggerExit2D(Collider2D other)
     {
         if (other.CompareTag("Player") && !other.isTrigger)
         {
+            Debug.Log("ExitRoom");
             //dissable arrays
             for (int i = 0; i < enemiesArr.Length; i++)
             {
@@ -50,8 +51,8 @@ public class Room : MonoBehaviour
             {
                 ChangeActive(potsArr[i], false);
             }
+            virtualCam.SetActive(false);
         }
-        virtualCam.SetActive(false);
     }
 
     public void ChangeActive(Component component,bool activation)

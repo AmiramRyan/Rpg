@@ -28,12 +28,12 @@ public class Enemy : MonoBehaviour
 
     private void Awake()
     {
-        hitPoints = maxHealth.initialValue;
+       // hitPoints = maxHealth.initialValue;
     }
 
-    private void OnEnable()
+    public virtual void OnEnable()
     {
-        //transform.position = homePosition;
+        hitPoints = maxHealth.initialValue;
     }
     private void TakeDmg(float dmg)
     {

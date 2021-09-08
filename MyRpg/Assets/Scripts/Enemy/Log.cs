@@ -25,6 +25,11 @@ public class Log : Enemy
         anim.SetBool("isAwake", true);
     }
 
+    public override void OnEnable()
+    {
+        base.OnEnable();
+        currentState = EnemyState.walk;
+    }
 
     void FixedUpdate()
     {
