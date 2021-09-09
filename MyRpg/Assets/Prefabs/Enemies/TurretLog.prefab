@@ -213,13 +213,15 @@ MonoBehaviour:
   enemyName: Sniper
   hitPoints: 2
   maxHealth: {fileID: 11400000, guid: 5ffd1b081b1703a40a9ea4de51f717d8, type: 2}
+  homePosition: {x: 0, y: 0}
   deathEffect: {fileID: 7820588365489165176, guid: 9d84d9bbd561bf3479a6a12b74a7497a, type: 3}
   effectTimeToLive: 0.8
+  lootTable: {fileID: 11400000, guid: d878dda5688a55447bdfacffdffbece0, type: 2}
+  roomSignal: {fileID: 0}
   myRb: {fileID: 0}
   target: {fileID: 0}
   cheseRadius: 6
   attackRadius: 0
-  homePosition: {fileID: 0}
   anim: {fileID: 0}
   projectile: {fileID: 4057701621290618389, guid: 8eeaaeda3a210d249ad4d2593d21c571, type: 3}
   fireCooldown: 1.8

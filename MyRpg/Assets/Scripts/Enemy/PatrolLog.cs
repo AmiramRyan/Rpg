@@ -8,6 +8,13 @@ public class PatrolLog : Log
     public int currnetPoint;
     public Transform currentGoal;
     public float distanceDeviant;
+
+    public override void OnEnable()
+    {
+        base.OnEnable();
+        currentState = EnemyState.walk;
+    }
+
     public override void CheckDist()
     {
         if (Vector3.Distance(target.position, transform.position) <= cheseRadius
@@ -37,7 +44,7 @@ public class PatrolLog : Log
         }
     }
 
-    private void ChangeGoal()
+    public void ChangeGoal()
     {
         if(currnetPoint == path.Length - 1)
         {

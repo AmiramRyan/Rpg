@@ -45,7 +45,8 @@ public class TurretLog : Log
                 {
                     Vector3 temp = target.transform.position - transform.position; //distance between player and the turret
                     GameObject proj = Instantiate(projectile, transform.position, Quaternion.identity) as GameObject;
-                    changeAnimation(temp - transform.position);
+                    Debug.Log("temp: " + temp + "   " +(temp - transform.position));
+                    changeAnimation(temp);
                     proj.GetComponent<Projectile>().Fire(temp);
                     fireReady = false;
                     ChangeState(EnemyState.walk);

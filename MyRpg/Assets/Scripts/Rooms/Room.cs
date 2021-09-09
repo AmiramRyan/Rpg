@@ -23,7 +23,6 @@ public class Room : MonoBehaviour
     {
         if(other.CompareTag("Player") && !other.isTrigger)
         {
-            Debug.Log("EnterRoom");
             //enable arrays
             for(int i = 0; i< enemiesArr.Length; i++)
             {
@@ -41,7 +40,6 @@ public class Room : MonoBehaviour
     {
         if (other.CompareTag("Player") && !other.isTrigger)
         {
-            Debug.Log("ExitRoom");
             //dissable arrays
             for (int i = 0; i < enemiesArr.Length; i++)
             {

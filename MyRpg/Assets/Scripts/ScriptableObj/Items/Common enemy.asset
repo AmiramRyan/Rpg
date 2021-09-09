@@ -12,3 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fe32b27965afa441ab6a84d32fe9a05, type: 3}
   m_Name: Common enemy
   m_EditorClassIdentifier: 
+  lootArr:
+  - thisLoot: {fileID: 8925091957204247550, guid: ba7cb30bd6524a8448d455ecb228b877, type: 3}
+    lootChance: 30
+  - thisLoot: {fileID: 3629283687548045183, guid: 7b2647c5a1426d244a0c15267fca8cc6, type: 3}
+    lootChance: 20
