@@ -23,6 +23,7 @@ public class Enemy : MonoBehaviour
     [Header("Effects")]
     public GameObject deathEffect;
     public float effectTimeToLive;
+    public LootTable lootTable;
 
     public Signal roomSignal;
 
@@ -44,6 +45,7 @@ public class Enemy : MonoBehaviour
             //die animations
             playDeathEffect();
             //spawn loot randomly
+            MakeItRain();
             //destroy obj
             this.gameObject.SetActive(false); // for debugging 
         }
@@ -76,6 +78,18 @@ public class Enemy : MonoBehaviour
         {
             GameObject effect = Instantiate(deathEffect, transform.position, Quaternion.identity);
             Destroy(effect, effectTimeToLive);
+        }
+    }
+
+    public void MakeItRain()
+    {
+        if (lootTable != null) 
+        {
+            PowerUp gonnaSpawn = lootTable.RollForLoot();
+            if (gonnaSpawn != null)
+            {
+                Instantiate(gonnaSpawn.gameObject, transform.position, Quaternion.identity);
+            }
         }
     }
 }
