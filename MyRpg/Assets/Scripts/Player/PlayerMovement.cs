@@ -100,6 +100,8 @@ public class PlayerMovement : MonoBehaviour
         {
             currentState = PlayerState.walk;
             MoveCharacter();
+            change.x = Mathf.Round(change.x);
+            change.y = Mathf.Round(change.y);
             myAnimator.SetBool("isMoving", true);
             myAnimator.SetFloat("moveX", change.x);
             myAnimator.SetFloat("moveY", change.y);

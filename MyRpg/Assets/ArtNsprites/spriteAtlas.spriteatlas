@@ -44,7 +44,7 @@ SpriteAtlas:
     variantMultiplier: 1
     packables:
     - {fileID: 102900000, guid: 567a1fd0350ffdb43bdaf3702d5b8514, type: 3}
-    totalSpriteSurfaceArea: 695365
+    totalSpriteSurfaceArea: 1400165
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
@@ -1415,6 +1415,7 @@ SpriteAtlas:
   - {fileID: 5566842953363755866, guid: 2de0d5f7dbaa2d24e9f6cd06e7e5a292, type: 3}
   - {fileID: -7445369939883215787, guid: 2de0d5f7dbaa2d24e9f6cd06e7e5a292, type: 3}
   - {fileID: 21300000, guid: eba73318605cfb54e9bc8edcfaa1307f, type: 3}
+  - {fileID: 21300000, guid: eb5baf58b9b76614d8e81984d77b3902, type: 3}
   - {fileID: -4950680412457382125, guid: 3390d5884c2608f4eb0096504c381f0e, type: 3}
   - {fileID: -2869115396899081085, guid: 3390d5884c2608f4eb0096504c381f0e, type: 3}
   - {fileID: 5158049076337375859, guid: 65eb4498dc2b1ff4aa296961da47707d, type: 3}
@@ -1424,6 +1425,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 20f031992c1b22c4982792bf2b77e29c, type: 3}
   - {fileID: 21300000, guid: 651dbd992fa755842ac7125fe0b5d011, type: 3}
   - {fileID: 21300000, guid: 7695178b47b9e7042b6941a682ac03c2, type: 3}
+  - {fileID: 21300000, guid: e7cc391c16a6f1a45bb1f64f67a753a5, type: 3}
   - {fileID: 640788118349026797, guid: 9ce42bac29714c049a4b30097efe4178, type: 3}
   - {fileID: 8095228989983127831, guid: 9ce42bac29714c049a4b30097efe4178, type: 3}
   - {fileID: -869280206655134145, guid: 9ce42bac29714c049a4b30097efe4178, type: 3}
@@ -3375,6 +3377,7 @@ SpriteAtlas:
   - log_21
   - log_22
   - NPC_test
+  - New Game Button
   - Doors_1
   - Doors_0
   - HpBarsDevided_3
@@ -3384,6 +3387,7 @@ SpriteAtlas:
   - FullMana
   - RightArrow
   - LastDrop
+  - background
   - WaterNStore_8
   - WaterNStore_9
   - WaterNStore_4

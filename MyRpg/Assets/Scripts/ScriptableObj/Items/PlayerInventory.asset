@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: PlayerInventory
   m_EditorClassIdentifier: 
   currentItem: {fileID: 0}
-  inventoryList: []
+  inventoryList:
+  - {fileID: 0}
+  - {fileID: 11400000, guid: 0131d7b62b3e2d24c8a2bbc170fd09c0, type: 2}
   numOfKeys: 4
   coins: 0
