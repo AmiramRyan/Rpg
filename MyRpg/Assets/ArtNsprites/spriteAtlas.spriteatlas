@@ -44,7 +44,7 @@ SpriteAtlas:
     variantMultiplier: 1
     packables:
     - {fileID: 102900000, guid: 567a1fd0350ffdb43bdaf3702d5b8514, type: 3}
-    totalSpriteSurfaceArea: 1400165
+    totalSpriteSurfaceArea: 1404261
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
@@ -1422,6 +1422,10 @@ SpriteAtlas:
   - {fileID: 6973300902775073053, guid: 65eb4498dc2b1ff4aa296961da47707d, type: 3}
   - {fileID: -6430984578321128598, guid: 65eb4498dc2b1ff4aa296961da47707d, type: 3}
   - {fileID: -8338318881151387264, guid: 65eb4498dc2b1ff4aa296961da47707d, type: 3}
+  - {fileID: -3165365474127048241, guid: 9f03b4e8472b5734b922f335299e0dac, type: 3}
+  - {fileID: -2903190892296097466, guid: 9f03b4e8472b5734b922f335299e0dac, type: 3}
+  - {fileID: -3070969452741559062, guid: 9f03b4e8472b5734b922f335299e0dac, type: 3}
+  - {fileID: -1291174620826640275, guid: 9f03b4e8472b5734b922f335299e0dac, type: 3}
   - {fileID: 21300000, guid: 20f031992c1b22c4982792bf2b77e29c, type: 3}
   - {fileID: 21300000, guid: 651dbd992fa755842ac7125fe0b5d011, type: 3}
   - {fileID: 21300000, guid: 7695178b47b9e7042b6941a682ac03c2, type: 3}
@@ -3384,6 +3388,10 @@ SpriteAtlas:
   - HpBarsDevided_2
   - HpBarsDevided_1
   - HpBarsDevided_0
+  - SummonSprite_0
+  - SummonSprite_1
+  - SummonSprite_2
+  - SummonSprite_3
   - FullMana
   - RightArrow
   - LastDrop

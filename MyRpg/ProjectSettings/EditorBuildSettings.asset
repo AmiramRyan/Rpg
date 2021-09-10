@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: fc94e932e3977d44eae83cf060d8e858
   - enabled: 1
+    path: Assets/Scenes/CellerCutsecene.unity
+    guid: 5a314a48e7114dd48a13f5bd98469641
+  - enabled: 1
     path: Assets/Scenes/IntroHouseCeller.unity
     guid: 2cef3d3ede579aa46bde4171d26f41c3
   - enabled: 1
