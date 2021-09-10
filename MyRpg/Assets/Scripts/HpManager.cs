@@ -19,7 +19,7 @@ public class HpManager : MonoBehaviour
 
     public virtual void setUp()
     {
-        for (int i = 0; i < heartContainers.initialValue; i++)
+        for (int i = 0; i < heartContainers.runTimeValue; i++)
         {
             heartsArr[i].gameObject.SetActive(true);
             heartsArr[i].sprite = fullHeart;
@@ -29,7 +29,7 @@ public class HpManager : MonoBehaviour
     public virtual void UpdateHearts()
     {
         float tempHp = playerCurrentHeart.runTimeValue / 2; // half a heart is 1 hp
-        for (int i = 0;i< heartContainers.initialValue; i++)
+        for (int i = 0;i< heartContainers.runTimeValue; i++)
         {
             if (i <= tempHp - 1)
             {

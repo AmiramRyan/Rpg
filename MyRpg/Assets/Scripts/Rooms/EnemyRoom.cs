@@ -27,7 +27,7 @@ public class EnemyRoom : DungeonRoom
     }
 
     
-    private void OnTriggerEnter2D(Collider2D other)
+    public override void OnTriggerEnter2D(Collider2D other)
     {
         
         if (other.CompareTag("Player") && !other.isTrigger)
@@ -46,7 +46,7 @@ public class EnemyRoom : DungeonRoom
         }
     }
 
-    private void OnTriggerExit2D(Collider2D other)
+    public override void OnTriggerExit2D(Collider2D other)
     {
         if (other.CompareTag("Player") && !other.isTrigger)
         {

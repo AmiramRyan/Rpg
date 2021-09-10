@@ -29,6 +29,7 @@ public class PlayerMovement : MonoBehaviour
     public Signal playerHit;
     public Signal playerMpSignal;
     public GameObject arrowProj;
+    public Item playerBow;
 
     public PlayerState currentState;
 
@@ -37,11 +38,13 @@ public class PlayerMovement : MonoBehaviour
     #region Private vars
 
     private Vector3 change;
+    private bool haveBow;
 
     #endregion
 
     void Start()
     {
+        haveBow = CheckItem(playerBow);
         currentState = PlayerState.walk;
         myRigidBody = GetComponent<Rigidbody2D>();
         myAnimator = GetComponent<Animator>();
@@ -76,7 +79,14 @@ public class PlayerMovement : MonoBehaviour
         }
         else if (Input.GetButtonDown("2ndattack") && currentState != PlayerState.attack && currentState != PlayerState.stagger)
         {
-            StartCoroutine(SecondAttackCo());
+            if (!haveBow)
+            {
+                haveBow = CheckItem(playerBow);
+            }
+            if (haveBow)
+            {
+                StartCoroutine(SecondAttackCo());
+            }
         }
     }
     void MoveCharacter()
@@ -186,5 +196,14 @@ public class PlayerMovement : MonoBehaviour
     {
         float rotation = Mathf.Atan2(myAnimator.GetFloat("moveY"), myAnimator.GetFloat("moveX")) * Mathf.Rad2Deg;
         return new Vector3(0, 0, rotation);
+    }
+
+    public bool CheckItem(Item item)
+    {
+        if (playerInventory.inventoryList.Contains(item))
+        {
+            return true;
+        }
+        return false;
     }
 }

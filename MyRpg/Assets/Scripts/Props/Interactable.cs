@@ -28,7 +28,7 @@ public class Interactable : MonoBehaviour
         }
     }
 
-    public void OnTriggerExit2D(Collider2D other)
+    public virtual void OnTriggerExit2D(Collider2D other)
     {
         if (playerInRange)
         {

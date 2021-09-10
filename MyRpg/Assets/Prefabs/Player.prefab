@@ -342,13 +342,15 @@ MonoBehaviour:
   playerSpeed: 4
   attackCooldown: 0.2
   currentHealth: {fileID: 11400000, guid: 1c6af593bccbc154e932a52b434b483c, type: 2}
-  playerHpSignal: {fileID: 11400000, guid: 83a41819d4248454595941c279cf9263, type: 2}
+  currentMp: {fileID: 11400000, guid: 64ebade1503665e478f52a9171dfff68, type: 2}
   startPos: {fileID: 11400000, guid: be7c10eed8bf65f4e9b82e68687cc802, type: 2}
   myRigidBody: {fileID: 0}
   myAnimator: {fileID: 0}
   playerInventory: {fileID: 11400000, guid: a90d2002ff034e2488ab59347d39205b, type: 2}
   receiveItemSprite: {fileID: 1836297924}
+  playerHpSignal: {fileID: 11400000, guid: 83a41819d4248454595941c279cf9263, type: 2}
   playerHit: {fileID: 11400000, guid: 91db6bfbcbf0e4d45900f70b46f1df8d, type: 2}
+  playerMpSignal: {fileID: 11400000, guid: 7040ea525d50d5e42bf9c53b8f1cdc75, type: 2}
   arrowProj: {fileID: 2960993685858243927, guid: b1a40232a31db08439cdfc70b939b672, type: 3}
   currentState: 0
 --- !u!95 &6884080907329561932

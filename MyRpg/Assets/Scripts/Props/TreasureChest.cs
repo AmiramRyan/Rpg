@@ -77,7 +77,7 @@ public class TreasureChest : Interactable
             activeObj = false;
     }
 
-    public void OnTriggerEnter2D(Collider2D other)
+    public override void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player") && other.isTrigger)
         {
@@ -92,7 +92,7 @@ public class TreasureChest : Interactable
         }
     }
 
-    public void OnTriggerExit2D(Collider2D other)
+    public override void OnTriggerExit2D(Collider2D other)
     {
         if (other.CompareTag("Player") && other.isTrigger)
         {

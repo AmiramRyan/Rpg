@@ -28,7 +28,7 @@ public class Sign : Interactable
                 }
             }
     }  
-    public void OnTriggerExit2D(Collider2D other)
+    public override void OnTriggerExit2D(Collider2D other)
     {
         if (playerInRange)
         {
