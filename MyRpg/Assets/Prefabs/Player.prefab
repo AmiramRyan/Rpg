@@ -202,7 +202,7 @@ GameObject:
   - component: {fileID: 363841532}
   - component: {fileID: 363841533}
   - component: {fileID: 1284964045054138792}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -349,6 +349,7 @@ MonoBehaviour:
   playerInventory: {fileID: 11400000, guid: a90d2002ff034e2488ab59347d39205b, type: 2}
   receiveItemSprite: {fileID: 1836297924}
   playerHit: {fileID: 11400000, guid: 91db6bfbcbf0e4d45900f70b46f1df8d, type: 2}
+  arrowProj: {fileID: 2960993685858243927, guid: b1a40232a31db08439cdfc70b939b672, type: 3}
   currentState: 0
 --- !u!95 &6884080907329561932
 Animator:
@@ -382,7 +383,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.012157202, y: -0.12352219}
+  m_Offset: {x: 0.01394701, y: -0.035799146}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -393,7 +394,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5282922, y: 1.0313013}
+  m_Size: {x: 0.87560177, y: 1.2155468}
   m_EdgeRadius: 0
 --- !u!114 &363841532
 MonoBehaviour:

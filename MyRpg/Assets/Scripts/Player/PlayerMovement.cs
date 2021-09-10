@@ -17,7 +17,7 @@ public class PlayerMovement : MonoBehaviour
     public float playerSpeed;
     public float attackCooldown;
     public FloatValue currentHealth;
-    public Signal playerHpSignal;
+    public FloatValue currentMp;
     public VectorValue startPos;
 
     [Header("Objects Ref")]
@@ -25,7 +25,10 @@ public class PlayerMovement : MonoBehaviour
     public Animator myAnimator;
     public Inventory playerInventory;
     public SpriteRenderer receiveItemSprite;
+    public Signal playerHpSignal;
     public Signal playerHit;
+    public Signal playerMpSignal;
+    public GameObject arrowProj;
 
     public PlayerState currentState;
 
@@ -70,6 +73,10 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetButtonDown("attack") && currentState != PlayerState.attack && currentState != PlayerState.stagger)
         {
             StartCoroutine(AttackCo());
+        }
+        else if (Input.GetButtonDown("2ndattack") && currentState != PlayerState.attack && currentState != PlayerState.stagger)
+        {
+            StartCoroutine(SecondAttackCo());
         }
     }
     void MoveCharacter()
@@ -120,6 +127,25 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    private IEnumerator SecondAttackCo()
+    {
+        if (currentMp.runTimeValue > 0)
+        {
+            currentState = PlayerState.attack;
+            yield return null;
+            Vector2 temp = new Vector2(myAnimator.GetFloat("moveX"), myAnimator.GetFloat("moveY"));
+            Arrow arrow = Instantiate(arrowProj, transform.position, Quaternion.identity).GetComponent<Arrow>();
+            arrow.Fire(ChooseArrowDirection(), temp);
+            currentMp.runTimeValue--; //update costs later!!
+            playerMpSignal.Rise();
+            yield return new WaitForSeconds(attackCooldown);
+            if (currentState != PlayerState.interact)
+            {
+                currentState = PlayerState.walk;
+            }
+        }
+    }
+
     public void Knock(float knockTime , float dmg)
     {
         currentHealth.runTimeValue -= dmg;
@@ -154,5 +180,11 @@ public class PlayerMovement : MonoBehaviour
                 playerInventory.currentItem = null;
             }
         }
+    }
+
+    private Vector3 ChooseArrowDirection()
+    {
+        float rotation = Mathf.Atan2(myAnimator.GetFloat("moveY"), myAnimator.GetFloat("moveX")) * Mathf.Rad2Deg;
+        return new Vector3(0, 0, rotation);
     }
 }

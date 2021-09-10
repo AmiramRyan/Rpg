@@ -13,7 +13,7 @@ public class Interactable : MonoBehaviour
         activeObj = true;
     }
 
-    public void OnTriggerEnter2D(Collider2D other)
+    public virtual void OnTriggerEnter2D(Collider2D other)
     {
         if (!playerInRange)
         {

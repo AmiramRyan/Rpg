@@ -17,7 +17,7 @@ public class HpManager : MonoBehaviour
         setUp();
     }
 
-    public void setUp()
+    public virtual void setUp()
     {
         for (int i = 0; i < heartContainers.initialValue; i++)
         {
@@ -26,7 +26,7 @@ public class HpManager : MonoBehaviour
         }
     }
 
-    public void UpdateHearts()
+    public virtual void UpdateHearts()
     {
         float tempHp = playerCurrentHeart.runTimeValue / 2; // half a heart is 1 hp
         for (int i = 0;i< heartContainers.initialValue; i++)
