@@ -1414,7 +1414,22 @@ SpriteAtlas:
   - {fileID: -2086765476746818828, guid: 2de0d5f7dbaa2d24e9f6cd06e7e5a292, type: 3}
   - {fileID: 5566842953363755866, guid: 2de0d5f7dbaa2d24e9f6cd06e7e5a292, type: 3}
   - {fileID: -7445369939883215787, guid: 2de0d5f7dbaa2d24e9f6cd06e7e5a292, type: 3}
-  - {fileID: 21300000, guid: eba73318605cfb54e9bc8edcfaa1307f, type: 3}
+  - {fileID: -1790513009360131488, guid: eba73318605cfb54e9bc8edcfaa1307f, type: 3}
+  - {fileID: 6796940128468367395, guid: eba73318605cfb54e9bc8edcfaa1307f, type: 3}
+  - {fileID: 7257679221847934946, guid: eba73318605cfb54e9bc8edcfaa1307f, type: 3}
+  - {fileID: -8018767669905319889, guid: eba73318605cfb54e9bc8edcfaa1307f, type: 3}
+  - {fileID: 3471414262902695032, guid: eba73318605cfb54e9bc8edcfaa1307f, type: 3}
+  - {fileID: -5174125284999604879, guid: eba73318605cfb54e9bc8edcfaa1307f, type: 3}
+  - {fileID: 4411923371137299535, guid: eba73318605cfb54e9bc8edcfaa1307f, type: 3}
+  - {fileID: -7544729849536096197, guid: eba73318605cfb54e9bc8edcfaa1307f, type: 3}
+  - {fileID: 109808345321430783, guid: eba73318605cfb54e9bc8edcfaa1307f, type: 3}
+  - {fileID: -984706229473049029, guid: eba73318605cfb54e9bc8edcfaa1307f, type: 3}
+  - {fileID: -2757298984738394219, guid: eba73318605cfb54e9bc8edcfaa1307f, type: 3}
+  - {fileID: -3297999012176952179, guid: eba73318605cfb54e9bc8edcfaa1307f, type: 3}
+  - {fileID: -6431366237039918707, guid: eba73318605cfb54e9bc8edcfaa1307f, type: 3}
+  - {fileID: -8922353081226294202, guid: eba73318605cfb54e9bc8edcfaa1307f, type: 3}
+  - {fileID: 8869442856293547957, guid: eba73318605cfb54e9bc8edcfaa1307f, type: 3}
+  - {fileID: -1466947835845212873, guid: eba73318605cfb54e9bc8edcfaa1307f, type: 3}
   - {fileID: 21300000, guid: eb5baf58b9b76614d8e81984d77b3902, type: 3}
   - {fileID: -4950680412457382125, guid: 3390d5884c2608f4eb0096504c381f0e, type: 3}
   - {fileID: -2869115396899081085, guid: 3390d5884c2608f4eb0096504c381f0e, type: 3}
@@ -3380,7 +3395,22 @@ SpriteAtlas:
   - log_20
   - log_21
   - log_22
-  - NPC_test
+  - NPC_test_11
+  - NPC_test_10
+  - NPC_test_13
+  - NPC_test_12
+  - NPC_test_6
+  - NPC_test_7
+  - NPC_test_4
+  - NPC_test_5
+  - NPC_test_2
+  - NPC_test_3
+  - NPC_test_0
+  - NPC_test_1
+  - NPC_test_8
+  - NPC_test_9
+  - NPC_test_15
+  - NPC_test_14
   - New Game Button
   - Doors_1
   - Doors_0

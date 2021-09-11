@@ -9,6 +9,7 @@ TagManager:
   - EnemyHitBox
   - PlayerAttackHitBox
   - Room
+  - MapCollider
   layers:
   - Default
   - TransparentFX
