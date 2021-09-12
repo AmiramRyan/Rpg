@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class HpManager : MonoBehaviour
 {
@@ -11,18 +12,23 @@ public class HpManager : MonoBehaviour
     public Sprite emptyHeart;
     public FloatValue heartContainers;
     public FloatValue playerCurrentHeart;
-    // Start is called before the first frame update
+
+    
     void Start()
     {
         setUp();
+        UpdateHearts();
     }
 
     public virtual void setUp()
     {
         for (int i = 0; i < heartContainers.runTimeValue; i++)
         {
-            heartsArr[i].gameObject.SetActive(true);
-            heartsArr[i].sprite = fullHeart;
+            if (i < heartsArr.Length)
+            {
+                heartsArr[i].gameObject.SetActive(true);
+                heartsArr[i].sprite = fullHeart;
+            }
         }
     }
 

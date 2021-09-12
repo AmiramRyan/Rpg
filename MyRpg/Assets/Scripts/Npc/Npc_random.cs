@@ -51,7 +51,6 @@ public class Npc_random : Sign
     public void ChangeDir()
     {
         int randomPath = Random.Range(0, 5);
-        Debug.Log("num is: "+ randomPath);
         switch (randomPath)
         {
             case 0:
