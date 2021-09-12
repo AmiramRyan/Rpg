@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+// the prefab script for an inventory slot that containt an inventory item
+//will update the inventory ui to show slots "inventory item" inside
 public class InventorySlot : MonoBehaviour
 {
     [Header("Item Slot in the Ui")]
@@ -20,19 +22,22 @@ public class InventorySlot : MonoBehaviour
         if (thisItem)
         {
             itemImg.sprite = thisItem.itemImg; //show correct img
-            itemCounterText.text = "" + thisItem.numberInInv; // show correct qunatity
+            if (!thisItem.unique)
+            {
+                itemCounterText.text = "" + thisItem.numberInInv; // show correct qunatity
+            }
+            else
+            {
+                itemCounterText.text = "";
+            }
         }
     }
 
-
-    void Start()
+    public void ClickedOn()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if (thisItem)
+        {
+            invManager.SetItemInfo(thisItem.description, thisItem.usable, thisItem);
+        }
     }
 }

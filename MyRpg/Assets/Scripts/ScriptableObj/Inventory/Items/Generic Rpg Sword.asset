@@ -17,4 +17,7 @@ MonoBehaviour:
   numberInInv: 1
   usable: 0
   unique: 1
-  itemImg: {fileID: 21300000, guid: 651dbd992fa755842ac7125fe0b5d011, type: 3}
+  itemImg: {fileID: 21300000, guid: 625ecfcd8bac31140b8d29b8aa02c70d, type: 3}
+  thisEvent:
+    m_PersistentCalls:
+      m_Calls: []

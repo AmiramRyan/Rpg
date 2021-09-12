@@ -44,7 +44,7 @@ SpriteAtlas:
     variantMultiplier: 1
     packables:
     - {fileID: 102900000, guid: 567a1fd0350ffdb43bdaf3702d5b8514, type: 3}
-    totalSpriteSurfaceArea: 1404261
+    totalSpriteSurfaceArea: 1405029
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
@@ -1437,10 +1437,12 @@ SpriteAtlas:
   - {fileID: 6973300902775073053, guid: 65eb4498dc2b1ff4aa296961da47707d, type: 3}
   - {fileID: -6430984578321128598, guid: 65eb4498dc2b1ff4aa296961da47707d, type: 3}
   - {fileID: -8338318881151387264, guid: 65eb4498dc2b1ff4aa296961da47707d, type: 3}
+  - {fileID: 21300000, guid: 0ebbc4d8a53ce664d84be9a2da7529b4, type: 3}
   - {fileID: -3165365474127048241, guid: 9f03b4e8472b5734b922f335299e0dac, type: 3}
   - {fileID: -2903190892296097466, guid: 9f03b4e8472b5734b922f335299e0dac, type: 3}
   - {fileID: -3070969452741559062, guid: 9f03b4e8472b5734b922f335299e0dac, type: 3}
   - {fileID: -1291174620826640275, guid: 9f03b4e8472b5734b922f335299e0dac, type: 3}
+  - {fileID: 21300000, guid: 699b09199ef5227419483b1ffa16338f, type: 3}
   - {fileID: 21300000, guid: 20f031992c1b22c4982792bf2b77e29c, type: 3}
   - {fileID: 21300000, guid: 651dbd992fa755842ac7125fe0b5d011, type: 3}
   - {fileID: 21300000, guid: 7695178b47b9e7042b6941a682ac03c2, type: 3}
@@ -1624,6 +1626,7 @@ SpriteAtlas:
   - {fileID: -7903152263914619656, guid: 417430bd9f844b744aed6788811c4b82, type: 3}
   - {fileID: -4978113134295867063, guid: 417430bd9f844b744aed6788811c4b82, type: 3}
   - {fileID: 47775018648080561, guid: 417430bd9f844b744aed6788811c4b82, type: 3}
+  - {fileID: 21300000, guid: 625ecfcd8bac31140b8d29b8aa02c70d, type: 3}
   - {fileID: -1986772863260763996, guid: 5b60001eedde5d3428904f61b2a056d0, type: 3}
   - {fileID: 5760800594879907098, guid: 5b60001eedde5d3428904f61b2a056d0, type: 3}
   - {fileID: 7597474578557255370, guid: 5b60001eedde5d3428904f61b2a056d0, type: 3}
@@ -3418,10 +3421,12 @@ SpriteAtlas:
   - HpBarsDevided_2
   - HpBarsDevided_1
   - HpBarsDevided_0
+  - HpPotionSmall
   - SummonSprite_0
   - SummonSprite_1
   - SummonSprite_2
   - SummonSprite_3
+  - HpPotionBig
   - FullMana
   - RightArrow
   - LastDrop
@@ -3605,6 +3610,7 @@ SpriteAtlas:
   - cave_110
   - cave_108
   - cave_109
+  - SwordIcon
   - objects_71
   - objects_70
   - objects_73
