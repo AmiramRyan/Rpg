@@ -12,35 +12,38 @@ public enum PlayerState
 }
 public class PlayerMovement : MonoBehaviour
 {
-    #region Public vars
     [Header("Vars")]
     public float playerSpeed;
     public float attackCooldown;
-    public FloatValue currentHealth;
-    public FloatValue currentMp;
     public VectorValue startPos;
 
     [Header("Objects Ref")]
     public Rigidbody2D myRigidBody;
     public Animator myAnimator;
-    public Inventory playerInventory;
-    public SpriteRenderer receiveItemSprite;
-    public Signal playerHpSignal;
-    public Signal playerHit;
-    public Signal playerMpSignal;
-    public GameObject arrowProj;
-    public Item playerBow;
 
     public PlayerState currentState;
 
-    #endregion
 
-    #region Private vars
-
+    //todo Hp
+    public Signal playerHpSignal;
+    public FloatValue currentHealth;
     private Vector3 change;
-    private bool haveBow;
 
-    #endregion
+    //todo inventory
+    public Inventory playerInventory;
+    public SpriteRenderer receiveItemSprite;
+
+    //todo player hit mybe on hp
+    public Signal playerHit;
+
+    //todo magic
+    public FloatValue currentMp;
+    public Signal playerMpSignal;
+    //todo ability
+    public Item playerBow;
+    private bool haveBow;
+    public GameObject arrowProj;
+
 
     void Start()
     {
@@ -127,8 +130,10 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    //todo move knockto its own script
     private IEnumerator knockCo(float knockTime)
     {
+        //todo hp
         playerHit.Rise();
         if (myRigidBody != null)
         {
@@ -145,10 +150,12 @@ public class PlayerMovement : MonoBehaviour
         {
             currentState = PlayerState.attack;
             yield return null;
+            //todo ploymorph this from arrow to ability in general
             Vector2 temp = new Vector2(myAnimator.GetFloat("moveX"), myAnimator.GetFloat("moveY"));
             Arrow arrow = Instantiate(arrowProj, transform.position, Quaternion.identity).GetComponent<Arrow>();
             arrow.Fire(ChooseArrowDirection(), temp);
             currentMp.runTimeValue--; //update costs later!!
+            //todo mp
             playerMpSignal.Rise();
             yield return new WaitForSeconds(attackCooldown);
             if (currentState != PlayerState.interact)
@@ -158,9 +165,11 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    //todo move knockto its own script
     public void Knock(float knockTime , float dmg)
     {
         currentHealth.runTimeValue -= dmg;
+        //todo hp
         playerHpSignal.Rise();
         if (currentHealth.runTimeValue > 0)
         {

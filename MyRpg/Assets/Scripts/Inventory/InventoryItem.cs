@@ -5,6 +5,7 @@ using UnityEngine.Events;
 
 //the blueprint and all the data an item needs
 [CreateAssetMenu(fileName = "New Item", menuName = "Inventory/Items")]
+
 public class InventoryItem : ScriptableObject
 {
     public string itemName;
@@ -14,10 +15,34 @@ public class InventoryItem : ScriptableObject
     public bool unique; //can only have 1 of those
     public Sprite itemImg;
     public UnityEvent thisEvent;
+    public TypeOfPotion thisType;
+    public enum TypeOfPotion
+    {
+        hp,
+        mp
+    }
 
     public void Use()
     {
-        Debug.Log("Ues Item");
+
         thisEvent.Invoke();
+    }
+
+    public void DecreaseAmount(int amount)
+    {
+        numberInInv -= amount;
+        if (numberInInv < 0)
+        {
+            numberInInv = 0;
+        }
+    }
+
+    public void IncreaseAmount(int amount)
+    {
+        numberInInv += amount;
+        if (numberInInv > 999)
+        {
+            numberInInv = 999;
+        }
     }
 }

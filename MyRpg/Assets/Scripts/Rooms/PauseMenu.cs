@@ -7,10 +7,15 @@ public class PauseMenu : MonoBehaviour
 {
     public bool isPause;
     public GameObject pausePanel;
+    public GameObject invPanel;
     public string mainMenu;
+    public bool isInv;
     void Start()
     {
         isPause = false;
+        pausePanel.SetActive(false);
+        invPanel.SetActive(false);
+        isInv = false;
     }
 
     // Update is called once per frame
@@ -32,6 +37,7 @@ public class PauseMenu : MonoBehaviour
         }
         else
         {
+            invPanel.SetActive(false);
             pausePanel.SetActive(false);
             Time.timeScale = 1f;
         }
@@ -47,5 +53,23 @@ public class PauseMenu : MonoBehaviour
     {
         pausePanel.SetActive(false);
         Time.timeScale = 1f;
+    }
+
+    public void SwitchToPanels()
+    {
+        if (isPause)
+        {
+            pausePanel.SetActive(false);
+            invPanel.SetActive(true);
+            isInv = true;
+            isPause = false;
+        }
+        else
+        {
+            invPanel.SetActive(false);
+            pausePanel.SetActive(true);
+            isInv = false;
+            isPause = true;
+        }
     }
 }

@@ -13,6 +13,10 @@ public class InventoryManager : MonoBehaviour
     [SerializeField] private GameObject invPanel;
     [SerializeField] private Text descriptionText;
     [SerializeField] private GameObject uesBtn;
+    public FloatValue playerHp;
+    public FloatValue playerMp;
+    public FloatValue playerHpContainer;
+    public FloatValue playerMpContainer;
     public InventoryItem currentItem;
 
     public void SetTxtNBtn(string descrip, bool btnActive)
@@ -28,8 +32,9 @@ public class InventoryManager : MonoBehaviour
         }
     }
 
-    void Start()
+    void OnEnable()
     {
+        CleanUpInv();
         CreateInvSlots();
         SetTxtNBtn("", false);
     }
@@ -38,14 +43,17 @@ public class InventoryManager : MonoBehaviour
     {
         if (playerInv)
         {
-            for(int i = playerInv.playerInv.Count - 1; i>=0 ; i--)
+            for(int i = 0; i < playerInv.playerInv.Count; i++)
             {
-                GameObject temp = Instantiate(blankInvSlot, invPanel.transform.position, Quaternion.identity);
-                temp.transform.SetParent(invPanel.transform);
-                InventorySlot newSlot = temp.GetComponent<InventorySlot>();
-                if (newSlot)
+                if (playerInv.playerInv[i].numberInInv > 0)
                 {
-                    newSlot.SetUp(playerInv.playerInv[i], this);
+                    GameObject temp = Instantiate(blankInvSlot, invPanel.transform.position, Quaternion.identity);
+                    temp.transform.SetParent(invPanel.transform);
+                    InventorySlot newSlot = temp.GetComponent<InventorySlot>();
+                    if (newSlot)
+                    {
+                        newSlot.SetUp(playerInv.playerInv[i], this);
+                    }
                 }
             }
         }
@@ -57,12 +65,37 @@ public class InventoryManager : MonoBehaviour
         descriptionText.text = description;
         uesBtn.SetActive(isUesable);
     }
+    
+    private void CleanUpInv()
+    {
+        for(int i = 0; i< invPanel.transform.childCount; i++)
+        {
+            Destroy(invPanel.transform.GetChild(i).gameObject); //clear the pannel 
+        }
+    }
 
     public void UesBtn()
     {
         if (currentItem)
         {
-            currentItem.Use();
+            if ((currentItem.thisType == InventoryItem.TypeOfPotion.hp && playerHp.runTimeValue < playerHpContainer.runTimeValue * 2) //ues hp potion only if hurt
+                ||(currentItem.thisType == InventoryItem.TypeOfPotion.mp && playerMp.runTimeValue < playerMpContainer.runTimeValue * 3)) // ues mp potion only if missing mp
+            {
+                currentItem.Use();
+                //clear inv slots so we can update the inventory
+                CleanUpInv();
+                //refill slots with whats left 
+                CreateInvSlots();
+                if (currentItem.numberInInv == 0)
+                {
+                    SetTxtNBtn("", false);
+                }
+            }
+            else
+            {
+                Debug.Log("already maxed");
+            }
+           
         }
     }
 }
