@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 4651889703158336925}
   - component: {fileID: 4651889703158336914}
   - component: {fileID: 4651889703158336916}
+  - component: {fileID: 6911084592374358285}
   m_Layer: 6
   m_Name: area log
   m_TagString: Enemy
@@ -224,3 +225,17 @@ MonoBehaviour:
   attackRadius: 1
   anim: {fileID: 0}
   areaBounds: {fileID: 0}
+--- !u!114 &6911084592374358285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4651889703158336917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39e0a5c5a6eda824f819926404a853ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dmg: 1
+  otherTag: Player

@@ -16,6 +16,7 @@ public class PlayerMovement : MonoBehaviour
     public float playerSpeed;
     public float attackCooldown;
     public VectorValue startPos;
+    private Vector3 change;
 
     [Header("Objects Ref")]
     public Rigidbody2D myRigidBody;
@@ -24,10 +25,7 @@ public class PlayerMovement : MonoBehaviour
     public PlayerState currentState;
 
 
-    //todo Hp
-    public Signal playerHpSignal;
-    public FloatValue currentHealth;
-    private Vector3 change;
+    
 
     //todo inventory
     public Inventory playerInventory;
@@ -80,7 +78,7 @@ public class PlayerMovement : MonoBehaviour
         {
             StartCoroutine(AttackCo());
         }
-        else if (Input.GetButtonDown("2ndattack") && currentState != PlayerState.attack && currentState != PlayerState.stagger)
+        else if (Input.GetButtonDown("ability") && currentState != PlayerState.attack && currentState != PlayerState.stagger)
         {
             if (!haveBow)
             {
@@ -166,20 +164,21 @@ public class PlayerMovement : MonoBehaviour
     }
 
     //todo move knockto its own script
-    public void Knock(float knockTime , float dmg)
+    public void Knock(float knockTime)
     {
-        currentHealth.runTimeValue -= dmg;
-        //todo hp
-        playerHpSignal.Rise();
-        if (currentHealth.runTimeValue > 0)
-        {
-            StartCoroutine(knockCo(knockTime));
-        }
-        else
-        {
-            Debug.Log("player death");
-            this.gameObject.SetActive(false);
-        }
+        StartCoroutine(knockCo(knockTime));
+        /* currentHealth.runTimeValue -= dmg;
+         //todo hp
+         playerHpSignal.Rise();
+         if (currentHealth.runTimeValue > 0)
+         {
+             StartCoroutine(knockCo(knockTime));
+         }
+         else
+         {
+             Debug.Log("player death");
+             this.gameObject.SetActive(false);
+         }*/
     }
     #endregion
 

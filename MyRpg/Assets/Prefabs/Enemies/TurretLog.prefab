@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 7631889531077420808}
   - component: {fileID: 7631889531077420807}
   - component: {fileID: 7631889531077420801}
+  - component: {fileID: 1134333933520377567}
   m_Layer: 6
   m_Name: TurretLog
   m_TagString: Enemy
@@ -226,3 +227,17 @@ MonoBehaviour:
   projectile: {fileID: 4057701621290618389, guid: 8eeaaeda3a210d249ad4d2593d21c571, type: 3}
   fireCooldown: 1.8
   fireReady: 0
+--- !u!114 &1134333933520377567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7631889531077420800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39e0a5c5a6eda824f819926404a853ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dmg: 1
+  otherTag: Player
