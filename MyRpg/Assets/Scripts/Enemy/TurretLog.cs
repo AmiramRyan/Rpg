@@ -27,11 +27,14 @@ public class TurretLog : Log
 
     private void Update()
     {
-        fireCooldownSec -= Time.deltaTime;
-        if(fireCooldownSec <= 0)
+        if (!fireReady)
         {
-            fireReady = true;
-            fireCooldownSec = fireCooldown;
+            fireCooldownSec -= Time.deltaTime;
+            if (fireCooldownSec <= 0)
+            {
+                fireReady = true;
+                fireCooldownSec = fireCooldown;
+            }
         }
     }
     public override void CheckDist()
@@ -45,9 +48,8 @@ public class TurretLog : Log
                 {
                     Vector3 temp = target.transform.position - transform.position; //distance between player and the turret
                     GameObject proj = Instantiate(projectile, transform.position, Quaternion.identity) as GameObject;
-                    Debug.Log("temp: " + temp + "   " +(temp - transform.position));
                     changeAnimation(temp);
-                    proj.GetComponent<Projectile>().Fire(temp);
+                    proj.GetComponent<Projectile>().Fire(temp.normalized);
                     fireReady = false;
                     ChangeState(EnemyState.walk);
                     anim.SetBool("isAwake", true);

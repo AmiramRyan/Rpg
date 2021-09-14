@@ -9,12 +9,10 @@ public class GenericHealth : MonoBehaviour
 
     void Start()
     {
-        Debug.Log("hmm");
         currHp = maxHp.runTimeValue;
     }
 
-    // Update is called once per frame
-    void Update()
+    public virtual void Update()
     {
         
     }
@@ -22,15 +20,15 @@ public class GenericHealth : MonoBehaviour
     public virtual void Heal(float amount)
     {
         currHp += amount;
-        if(currHp > maxHp.runTimeValue)
+        if(currHp > maxHp.initialValue)
         {
-            currHp = maxHp.runTimeValue;
+            currHp = maxHp.initialValue;
         }
     }
 
     public virtual void FullHeal()
     {
-        currHp = maxHp.runTimeValue;
+        currHp = maxHp.initialValue;
     }
 
     public virtual void TakeDmg(float amount)

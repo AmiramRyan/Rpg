@@ -25,8 +25,6 @@ public class PlayerMovement : MonoBehaviour
     public PlayerState currentState;
 
 
-    
-
     //todo inventory
     public Inventory playerInventory;
     public SpriteRenderer receiveItemSprite;
@@ -163,22 +161,9 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    //todo move knockto its own script
     public void Knock(float knockTime)
     {
         StartCoroutine(knockCo(knockTime));
-        /* currentHealth.runTimeValue -= dmg;
-         //todo hp
-         playerHpSignal.Rise();
-         if (currentHealth.runTimeValue > 0)
-         {
-             StartCoroutine(knockCo(knockTime));
-         }
-         else
-         {
-             Debug.Log("player death");
-             this.gameObject.SetActive(false);
-         }*/
     }
     #endregion
 

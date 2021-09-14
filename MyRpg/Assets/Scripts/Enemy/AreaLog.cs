@@ -5,6 +5,7 @@ using UnityEngine;
 public class AreaLog : Log
 {
     public Collider2D areaBounds;
+
     public override void CheckDist()
     {
         if (Vector3.Distance(target.position, transform.position) <= cheseRadius
@@ -13,6 +14,7 @@ public class AreaLog : Log
         {
             if (currentState == EnemyState.idle || currentState == EnemyState.walk)
             {
+                
                 Vector3 temp = Vector3.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
                 changeAnimation(temp - transform.position);
                 myRb.MovePosition(temp);

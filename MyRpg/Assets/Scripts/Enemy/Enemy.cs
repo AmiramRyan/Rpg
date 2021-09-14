@@ -14,10 +14,7 @@ public class Enemy : MonoBehaviour
 
     [Header("Vars")]
     public float speed;
-    public int dmg;
     public string enemyName;
-    public float hitPoints;
-    public FloatValue maxHealth;
     public Vector2 homePosition;
 
     [Header("Effects")]
@@ -27,30 +24,11 @@ public class Enemy : MonoBehaviour
 
     public Signal roomSignal;
 
-    private void Awake()
-    {
-       // hitPoints = maxHealth.initialValue;
-    }
-
     public virtual void OnEnable()
     {
-        hitPoints = maxHealth.initialValue;
         this.transform.position = homePosition;
     }
-    private void TakeDmg(float dmg)
-    {
-        hitPoints -= dmg;
-        if (hitPoints <= 0)
-        {
-            //die animations
-            playDeathEffect();
-            //spawn loot randomly
-            MakeItRain();
-            //destroy obj
-            this.gameObject.SetActive(false); // for debugging 
-        }
-    }
-
+    
     public void Knock(Rigidbody2D myRb, float knockTime)
     {
         StartCoroutine(knockCo(myRb, knockTime));

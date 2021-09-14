@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 7631889531077420807}
   - component: {fileID: 7631889531077420801}
   - component: {fileID: 1134333933520377567}
+  - component: {fileID: 1805128547897368621}
   m_Layer: 6
   m_Name: TurretLog
   m_TagString: Enemy
@@ -31,7 +32,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7631889531077420800}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -5.84, y: 5.6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -168,8 +169,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   knockTime: 0.2
-  thrust: 4
-  damage: 1
+  thrust: 2
+  otherTag: Player
 --- !u!61 &7631889531077420807
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -210,10 +211,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentState: 0
   speed: 0
-  dmg: 1
   enemyName: Sniper
-  hitPoints: 2
-  maxHealth: {fileID: 11400000, guid: 5ffd1b081b1703a40a9ea4de51f717d8, type: 2}
   homePosition: {x: 0, y: 0}
   deathEffect: {fileID: 7820588365489165176, guid: 9d84d9bbd561bf3479a6a12b74a7497a, type: 3}
   effectTimeToLive: 0.8
@@ -241,3 +239,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dmg: 1
   otherTag: Player
+--- !u!114 &1805128547897368621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7631889531077420800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 946560537d5e56541bd028009e2de99a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHp: {fileID: 11400000, guid: 5ffd1b081b1703a40a9ea4de51f717d8, type: 2}
+  currHp: 0

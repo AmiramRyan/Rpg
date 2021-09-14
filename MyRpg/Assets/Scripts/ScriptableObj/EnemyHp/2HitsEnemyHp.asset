@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: 2HitsEnemyHp
   m_EditorClassIdentifier: 
   initialValue: 2
+  runTimeValue: 2

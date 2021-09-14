@@ -14,8 +14,10 @@ GameObject:
   - component: {fileID: 1824256374237913169}
   - component: {fileID: 8908349323496196968}
   - component: {fileID: 8334260395264731232}
-  - component: {fileID: 5225735265838012090}
   - component: {fileID: 1497615081}
+  - component: {fileID: 5225735265838012090}
+  - component: {fileID: 8172627176516383015}
+  - component: {fileID: 6385395690960153905}
   m_Layer: 6
   m_Name: partol log
   m_TagString: Enemy
@@ -167,8 +169,39 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   knockTime: 0.2
-  thrust: 4
-  damage: 1
+  thrust: 2
+  otherTag: Player
+--- !u!114 &1497615081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8544415746471246718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fb841c9a9da1c5488f0b6ba93ac3130, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentState: 0
+  speed: 2
+  enemyName: Patroler
+  homePosition: {x: 0, y: 0}
+  deathEffect: {fileID: 7820588365489165176, guid: 9d84d9bbd561bf3479a6a12b74a7497a, type: 3}
+  effectTimeToLive: 0.8
+  lootTable: {fileID: 11400000, guid: d878dda5688a55447bdfacffdffbece0, type: 2}
+  roomSignal: {fileID: 0}
+  myRb: {fileID: 0}
+  target: {fileID: 0}
+  cheseRadius: 5
+  attackRadius: 1
+  anim: {fileID: 0}
+  path:
+  - {fileID: 0}
+  - {fileID: 0}
+  currnetPoint: 0
+  currentGoal: {fileID: 0}
+  distanceDeviant: 0
 --- !u!61 &5225735265838012090
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -195,7 +228,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.0140944, y: 1.188036}
   m_EdgeRadius: 0
---- !u!114 &1497615081
+--- !u!114 &8172627176516383015
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -204,28 +237,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 8544415746471246718}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6fb841c9a9da1c5488f0b6ba93ac3130, type: 3}
+  m_Script: {fileID: 11500000, guid: 39e0a5c5a6eda824f819926404a853ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentState: 0
-  speed: 2
   dmg: 1
-  enemyName: Patroler
-  hitPoints: 0
-  maxHealth: {fileID: 11400000, guid: 5ffd1b081b1703a40a9ea4de51f717d8, type: 2}
-  homePosition: {x: 0, y: 0}
-  deathEffect: {fileID: 7820588365489165176, guid: 9d84d9bbd561bf3479a6a12b74a7497a, type: 3}
-  effectTimeToLive: 0.8
-  lootTable: {fileID: 11400000, guid: d878dda5688a55447bdfacffdffbece0, type: 2}
-  roomSignal: {fileID: 0}
-  myRb: {fileID: 0}
-  target: {fileID: 0}
-  cheseRadius: 5
-  attackRadius: 1
-  anim: {fileID: 0}
-  path:
-  - {fileID: 0}
-  - {fileID: 0}
-  currnetPoint: 0
-  currentGoal: {fileID: 0}
-  distanceDeviant: 0
+  otherTag: Player
+--- !u!114 &6385395690960153905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8544415746471246718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 946560537d5e56541bd028009e2de99a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHp: {fileID: 11400000, guid: 5ffd1b081b1703a40a9ea4de51f717d8, type: 2}
+  currHp: 0

@@ -14,7 +14,8 @@ GameObject:
   - component: {fileID: 4057701621290618388}
   - component: {fileID: 4057701621290618384}
   - component: {fileID: 8008224295378700928}
-  - component: {fileID: 5971097918186812511}
+  - component: {fileID: -316246174962903320}
+  - component: {fileID: -6478489069269267927}
   m_Layer: 7
   m_Name: RockProjectile1
   m_TagString: Untagged
@@ -136,8 +137,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b31a07f6cf0880c43b11fee48094fc8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
-  lifeTime: 4
+  speed: 5
   direction: {x: 0, y: 0}
   myRb: {fileID: 4057701621290618388}
 --- !u!114 &8008224295378700928
@@ -154,8 +154,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   knockTime: 0.3
   thrust: 1
-  damage: 1
---- !u!114 &5971097918186812511
+  otherTag: Player
+--- !u!114 &-316246174962903320
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -164,8 +164,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 4057701621290618389}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 39e0a5c5a6eda824f819926404a853ce, type: 3}
+  m_Script: {fileID: 11500000, guid: 98ad2f746709fb047b49be9bf6a59832, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dmg: 1
   otherTag: Player
+  dmg: 1
+--- !u!114 &-6478489069269267927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4057701621290618389}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cefc60c65ea11f4d8df02b35c1be95f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifeTime: 3

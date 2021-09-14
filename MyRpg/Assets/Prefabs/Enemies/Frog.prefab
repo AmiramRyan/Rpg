@@ -75,7 +75,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   knockTime: 0.2
   thrust: 4
-  damage: 2
+  otherTag: 
 --- !u!1 &5113320310473484346
 GameObject:
   m_ObjectHideFlags: 0
@@ -151,7 +151,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   knockTime: 0.2
   thrust: 4
-  damage: 2
+  otherTag: 
 --- !u!1 &5113320311031135638
 GameObject:
   m_ObjectHideFlags: 0
@@ -169,6 +169,7 @@ GameObject:
   - component: {fileID: 5113320311031135630}
   - component: {fileID: 5948550791318425537}
   - component: {fileID: 5190693373323537520}
+  - component: {fileID: -5761565055389679409}
   m_Layer: 6
   m_Name: Frog
   m_TagString: Enemy
@@ -278,10 +279,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentState: 0
   speed: 1
-  dmg: 1
   enemyName: ForestFrog
-  hitPoints: 0
-  maxHealth: {fileID: 11400000, guid: 5ffd1b081b1703a40a9ea4de51f717d8, type: 2}
   homePosition: {x: 1.75, y: 1.56}
   deathEffect: {fileID: 7820588365489165176, guid: 9d84d9bbd561bf3479a6a12b74a7497a, type: 3}
   effectTimeToLive: 1.5
@@ -363,7 +361,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   knockTime: 0.2
   thrust: 3
-  damage: 1
+  otherTag: Player
 --- !u!61 &5948550791318425537
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -402,8 +400,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39e0a5c5a6eda824f819926404a853ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dmg: 1
+  dmg: 2
   otherTag: Player
+--- !u!114 &-5761565055389679409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5113320311031135638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 946560537d5e56541bd028009e2de99a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHp: {fileID: 11400000, guid: 5ffd1b081b1703a40a9ea4de51f717d8, type: 2}
+  currHp: 0
 --- !u!1 &5113320311618251442
 GameObject:
   m_ObjectHideFlags: 0
@@ -479,7 +491,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   knockTime: 0.2
   thrust: 4
-  damage: 2
+  otherTag: 
 --- !u!1 &5113320311866991494
 GameObject:
   m_ObjectHideFlags: 0
@@ -555,4 +567,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   knockTime: 0.2
   thrust: 4
-  damage: 2
+  otherTag: 

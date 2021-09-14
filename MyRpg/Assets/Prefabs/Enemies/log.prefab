@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 4891665500663115578}
   - component: {fileID: 4891665500663115573}
   - component: {fileID: 4892993206533282630}
+  - component: {fileID: 4675823982677865505}
   m_Layer: 6
   m_Name: log
   m_TagString: Enemy
@@ -122,10 +123,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentState: 0
   speed: 1.5
-  dmg: 1
   enemyName: Ms. Log
-  hitPoints: 1
-  maxHealth: {fileID: 11400000, guid: 5ffd1b081b1703a40a9ea4de51f717d8, type: 2}
   homePosition: {x: 0, y: 0}
   deathEffect: {fileID: 7820588365489165176, guid: 9d84d9bbd561bf3479a6a12b74a7497a, type: 3}
   effectTimeToLive: 0.8
@@ -196,8 +194,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   knockTime: 0.2
-  thrust: 4
-  damage: 1
+  thrust: 1
+  otherTag: Player
 --- !u!61 &4891665500663115573
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -238,3 +236,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dmg: 1
   otherTag: Player
+--- !u!114 &4675823982677865505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4891665500663115570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 946560537d5e56541bd028009e2de99a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHp: {fileID: 11400000, guid: 5ffd1b081b1703a40a9ea4de51f717d8, type: 2}
+  currHp: 0
