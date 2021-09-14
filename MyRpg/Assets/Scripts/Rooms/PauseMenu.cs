@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class PauseMenu : MonoBehaviour
 {
     public bool isPause;
+    public InventorySaver mySaver;
     public GameObject pausePanel;
     public GameObject invPanel;
     public string mainMenu;
@@ -71,5 +72,15 @@ public class PauseMenu : MonoBehaviour
             isInv = false;
             isPause = true;
         }
+    }
+
+    public void Save()
+    {
+        mySaver.Save();
+    }
+
+    public void ResetSave()
+    {
+        mySaver.Reset();
     }
 }

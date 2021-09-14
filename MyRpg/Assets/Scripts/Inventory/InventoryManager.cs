@@ -76,26 +76,47 @@ public class InventoryManager : MonoBehaviour
 
     public void UesBtn()
     {
-        if (currentItem)
+       InventoryItem.TypeOfPotion thisType= currentItem.thisType;
+        switch (thisType)
         {
-            if ((currentItem.thisType == InventoryItem.TypeOfPotion.hp && playerHp.runTimeValue < playerHpContainer.runTimeValue * 2) //ues hp potion only if hurt
-                ||(currentItem.thisType == InventoryItem.TypeOfPotion.mp && playerMp.runTimeValue < playerMpContainer.runTimeValue * 3)) // ues mp potion only if missing mp
-            {
-                currentItem.Use();
-                //clear inv slots so we can update the inventory
-                CleanUpInv();
-                //refill slots with whats left 
-                CreateInvSlots();
-                if (currentItem.numberInInv == 0)
+            case InventoryItem.TypeOfPotion.hp:
+                if (playerHp.runTimeValue < playerHpContainer.runTimeValue * 2)
                 {
-                    SetTxtNBtn("", false);
+                    UesAndCreate();
                 }
-            }
-            else
-            {
-                Debug.Log("already maxed");
-            }
-           
+                else
+                {
+                    Debug.Log("already maxed");
+                }
+                break;
+
+            case InventoryItem.TypeOfPotion.mp:
+                if (playerMp.runTimeValue < playerMpContainer.runTimeValue * 3)
+                {
+                    UesAndCreate();
+                }
+                else
+                {
+                    Debug.Log("already maxed");
+                }
+                break;
+
+            default:
+                currentItem.Use();
+                break;
+        }
+
+    }
+    public void UesAndCreate()
+    {
+        currentItem.Use();
+        //clear inv slots so we can update the inventory
+        CleanUpInv();
+        //refill slots with whats left 
+        CreateInvSlots();
+        if (currentItem.numberInInv == 0)
+        {
+            SetTxtNBtn("", false);
         }
     }
 }

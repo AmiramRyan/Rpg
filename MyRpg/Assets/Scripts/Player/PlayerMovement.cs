@@ -26,7 +26,7 @@ public class PlayerMovement : MonoBehaviour
 
 
     //todo inventory
-    public Inventory playerInventory;
+    public PlayerInventory playerInventory;
     public SpriteRenderer receiveItemSprite;
 
     //todo player hit mybe on hp
@@ -36,7 +36,7 @@ public class PlayerMovement : MonoBehaviour
     public FloatValue currentMp;
     public Signal playerMpSignal;
     //todo ability
-    public Item playerBow;
+    public InventoryItem playerBow;
     private bool haveBow;
     public GameObject arrowProj;
 
@@ -81,6 +81,7 @@ public class PlayerMovement : MonoBehaviour
             if (!haveBow)
             {
                 haveBow = CheckItem(playerBow);
+                Debug.Log(haveBow);
             }
             if (haveBow)
             {
@@ -175,7 +176,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 myAnimator.SetBool("isHoldingItem", true);
                 currentState = PlayerState.interact;
-                receiveItemSprite.sprite = playerInventory.currentItem.itemSprite;
+                receiveItemSprite.sprite = playerInventory.currentItem.itemImg;
             }
             else
             {
@@ -193,9 +194,9 @@ public class PlayerMovement : MonoBehaviour
         return new Vector3(0, 0, rotation);
     }
 
-    public bool CheckItem(Item item)
+    public bool CheckItem(InventoryItem item)
     {
-        if (playerInventory.inventoryList.Contains(item))
+        if (playerInventory.playerInv.Contains(item))
         {
             return true;
         }

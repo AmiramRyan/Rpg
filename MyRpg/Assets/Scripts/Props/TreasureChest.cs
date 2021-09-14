@@ -6,8 +6,8 @@ using UnityEngine.UI;
 public class TreasureChest : Interactable
 {
     [Header("Chest Content")]
-    public Inventory playerInv;
-    public Item contents;
+    public PlayerInventory playerInv;
+    public InventoryItem contents;
     public bool isOpen;
     public BooleanValue storeOpenStatue;
 

@@ -5,7 +5,7 @@ using UnityEngine;
 public class CoinPowerUp : PowerUp
 {
     public int coinValue;
-    public Inventory playerInv;
+    public PlayerInventory playerInv;
 
 
     public void AddCoins(int coinValue)

@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerHealth : GenericHealth
 {
     [SerializeField] private Signal hpSignal;
+    [SerializeField] private FloatValue playerHeartContainer;
 
     public override void Update()
     {
@@ -36,8 +37,7 @@ public class PlayerHealth : GenericHealth
 
     public override void FullHeal()
     {
-        currHp = maxHp.initialValue;
-        Debug.Log(this.gameObject.GetComponent<PlayerHealth>().currHp + " Here");
+        currHp = playerHeartContainer.runTimeValue * 2;
         maxHp.runTimeValue = currHp;
         hpSignal.Rise();
     }

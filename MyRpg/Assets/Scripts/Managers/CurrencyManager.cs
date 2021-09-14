@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class CurrencyManager : MonoBehaviour
 {
-    public Inventory playerInv;
+    public PlayerInventory playerInv;
     public Text coinText;
     void Start()
     {

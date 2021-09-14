@@ -17,7 +17,10 @@ MonoBehaviour:
   numberInInv: 1
   usable: 0
   unique: 1
+  isKey: 0
+  relatedText: Sheeeesh
   itemImg: {fileID: 21300000, guid: fa5b5d55a4014104aad5504fa8d736a5, type: 3}
   thisEvent:
     m_PersistentCalls:
       m_Calls: []
+  thisType: 0

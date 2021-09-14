@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Door_Key : Door
 {
-    public Inventory playerInv;
+    public PlayerInventory playerInv;
 
     public void Update()
     {

@@ -73,3 +73,4 @@ MonoBehaviour:
   maxHp: {fileID: 11400000, guid: 1c6af593bccbc154e932a52b434b483c, type: 2}
   currHp: 0
   hpSignal: {fileID: 11400000, guid: 83a41819d4248454595941c279cf9263, type: 2}
+  playerHeartContainer: {fileID: 11400000, guid: d200b949510d798498d486d9bd479aa4, type: 2}
