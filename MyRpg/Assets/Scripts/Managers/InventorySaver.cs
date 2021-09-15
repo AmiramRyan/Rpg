@@ -7,6 +7,11 @@ using UnityEngine;
 
 public class InventorySaver : MonoBehaviour
 {
+    public BooleanValue[] Chests;
+    public FloatValue playerHp;
+    public FloatValue playerMp;
+    public FloatValue playerHpContainer;
+    public FloatValue playerMpContainer;
     public PlayerInventory myInv;
     public static InventorySaver invSaver;
     void Awake()
@@ -21,14 +26,10 @@ public class InventorySaver : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
-        Load();
+        //Load();
     }
 
-    private void OnEnable()
-    {
-        myInv.playerInv.Clear();
-        Load();
-    }
+    
 
     public void Save()
     {
@@ -54,6 +55,7 @@ public class InventorySaver : MonoBehaviour
 
     public void Load()
     {
+        myInv.playerInv.Clear();
         int i = 0;
         while (File.Exists(Application.persistentDataPath + string.Format("/{0}.inv", i)))
         {
@@ -83,6 +85,19 @@ public class InventorySaver : MonoBehaviour
         {
             File.Delete(Application.persistentDataPath + string.Format("/{0}.inv", i));
             i++;
+        }
+        myInv.playerInv.Clear();
+        playerHp.runTimeValue = 6;
+        playerMp.runTimeValue = 9;
+        playerHpContainer.runTimeValue = 3;
+        playerMpContainer.runTimeValue = 3;
+    }
+
+    public void ResetChests() 
+    {
+        for(int i=0; i< Chests.Length; i++)
+        {
+            Chests[i].runTimeValue = false;
         }
     }
     //------------------------------------------------------------------------------

@@ -360,12 +360,12 @@ MonoBehaviour:
   myRigidBody: {fileID: 0}
   myAnimator: {fileID: 0}
   currentState: 0
-  playerInventory: {fileID: 11400000, guid: a90d2002ff034e2488ab59347d39205b, type: 2}
+  playerInventory: {fileID: 0}
   receiveItemSprite: {fileID: 1836297924}
   playerHit: {fileID: 11400000, guid: 91db6bfbcbf0e4d45900f70b46f1df8d, type: 2}
   currentMp: {fileID: 11400000, guid: 64ebade1503665e478f52a9171dfff68, type: 2}
   playerMpSignal: {fileID: 11400000, guid: 7040ea525d50d5e42bf9c53b8f1cdc75, type: 2}
-  playerBow: {fileID: 11400000, guid: 0131d7b62b3e2d24c8a2bbc170fd09c0, type: 2}
+  playerBow: {fileID: 0}
   arrowProj: {fileID: 2960993685858243927, guid: b1a40232a31db08439cdfc70b939b672, type: 3}
 --- !u!95 &6884080907329561932
 Animator:

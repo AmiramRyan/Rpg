@@ -43,7 +43,6 @@ public class SceneTransition : MonoBehaviour
         if(other.CompareTag("Player") && !other.isTrigger) 
         {
             oldPlayerPos.defaultValue = newPlayerPos;
-            //SceneManager.LoadScene(sceneNameToLoad);
             StartCoroutine(FadeCo());
         }
     }
