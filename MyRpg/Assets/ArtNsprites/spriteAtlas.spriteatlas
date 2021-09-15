@@ -44,7 +44,7 @@ SpriteAtlas:
     variantMultiplier: 1
     packables:
     - {fileID: 102900000, guid: 567a1fd0350ffdb43bdaf3702d5b8514, type: 3}
-    totalSpriteSurfaceArea: 2184919
+    totalSpriteSurfaceArea: 2185943
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
@@ -5068,6 +5068,7 @@ SpriteAtlas:
   - {fileID: -7667630355914279461, guid: fc7ffc4edc1704b469f209bb81e8e123, type: 3}
   - {fileID: -8577819113285326228, guid: fc7ffc4edc1704b469f209bb81e8e123, type: 3}
   - {fileID: -8279688178891027127, guid: fc7ffc4edc1704b469f209bb81e8e123, type: 3}
+  - {fileID: 21300000, guid: 1672601f6bc167648b31e9ee2994873b, type: 3}
   m_PackedSpriteNamesToIndex:
   - Overworld_827
   - Overworld_837
@@ -10087,6 +10088,7 @@ SpriteAtlas:
   - Room_Builder_Walls_16x16_954
   - Room_Builder_Walls_16x16_925
   - Room_Builder_Walls_16x16_955
+  - StatusBar 1
   m_RenderDataMap: {}
   m_Tag: spriteAtlas
   m_IsVariant: 0

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Interactable : MonoBehaviour
 {
+    //this class detect player and rise the question mark
     public bool playerInRange;
     public Signal clueSignal;
     public bool activeObj;
