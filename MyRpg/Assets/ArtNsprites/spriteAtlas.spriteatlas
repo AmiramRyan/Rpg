@@ -44,7 +44,7 @@ SpriteAtlas:
     variantMultiplier: 1
     packables:
     - {fileID: 102900000, guid: 567a1fd0350ffdb43bdaf3702d5b8514, type: 3}
-    totalSpriteSurfaceArea: 2180453
+    totalSpriteSurfaceArea: 2184919
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
@@ -1211,6 +1211,7 @@ SpriteAtlas:
   - {fileID: -6960371683831875272, guid: 451c565171e8ce24794223bcd56709b5, type: 3}
   - {fileID: 6469460937200175538, guid: 451c565171e8ce24794223bcd56709b5, type: 3}
   - {fileID: 2924928888349640390, guid: 451c565171e8ce24794223bcd56709b5, type: 3}
+  - {fileID: 21300000, guid: c6eb8a5179302da4fb9300be7dd4aabe, type: 3}
   - {fileID: -2830415819701672235, guid: df45619173ee744469cec1ff54b31b8f, type: 3}
   - {fileID: -7851387646758702589, guid: df45619173ee744469cec1ff54b31b8f, type: 3}
   - {fileID: -7381151084948546297, guid: df45619173ee744469cec1ff54b31b8f, type: 3}
@@ -1926,6 +1927,8 @@ SpriteAtlas:
   - {fileID: 3321681590055085053, guid: 82f8fdd2d7d922b47ba92f7832a18453, type: 3}
   - {fileID: -3750482850934594921, guid: 82f8fdd2d7d922b47ba92f7832a18453, type: 3}
   - {fileID: 5372776407919291188, guid: 82f8fdd2d7d922b47ba92f7832a18453, type: 3}
+  - {fileID: 21300000, guid: cdc3cff290a26ac4b989b1ad5b1a4cf8, type: 3}
+  - {fileID: 21300000, guid: cfc5dc33d8b5041409e032df7b41be85, type: 3}
   - {fileID: 5392312539115828187, guid: f5012b536e46562488445d4b7cd32816, type: 3}
   - {fileID: 6537089701838389941, guid: f5012b536e46562488445d4b7cd32816, type: 3}
   - {fileID: 4120153029931206042, guid: f5012b536e46562488445d4b7cd32816, type: 3}
@@ -2054,6 +2057,7 @@ SpriteAtlas:
   - {fileID: -2431439944167368855, guid: 02735c65064f20242a5940ef6e086340, type: 3}
   - {fileID: 7274838496166343488, guid: 02735c65064f20242a5940ef6e086340, type: 3}
   - {fileID: -8506932439865520012, guid: 02735c65064f20242a5940ef6e086340, type: 3}
+  - {fileID: 21300000, guid: 30a0fc656a7748045b831ee2a1b3fd77, type: 3}
   - {fileID: -6103562141526872274, guid: 0f11e7a55590e3244b4585d73c9e7e78, type: 3}
   - {fileID: -1055002336571979495, guid: 0f11e7a55590e3244b4585d73c9e7e78, type: 3}
   - {fileID: 4714714725914754299, guid: 0f11e7a55590e3244b4585d73c9e7e78, type: 3}
@@ -3502,6 +3506,8 @@ SpriteAtlas:
   - {fileID: 3495956653806562204, guid: 82b12e4a240cd2448a85380ab4039aa4, type: 3}
   - {fileID: -2604549593855758522, guid: 82b12e4a240cd2448a85380ab4039aa4, type: 3}
   - {fileID: 8897674871801497309, guid: 82b12e4a240cd2448a85380ab4039aa4, type: 3}
+  - {fileID: 21300000, guid: 2d73079a7693d304a858d8c47f6fba71, type: 3}
+  - {fileID: 21300000, guid: 404cab1b80116034dbb6c3c29e38b40e, type: 3}
   - {fileID: 21300000, guid: 7695178b47b9e7042b6941a682ac03c2, type: 3}
   - {fileID: 21300000, guid: e7cc391c16a6f1a45bb1f64f67a753a5, type: 3}
   - {fileID: 640788118349026797, guid: 9ce42bac29714c049a4b30097efe4178, type: 3}
@@ -6224,6 +6230,7 @@ SpriteAtlas:
   - Overworld_623
   - Overworld_673
   - Overworld_129
+  - CoinModule
   - NewAttacks_14
   - NewAttacks_15
   - NewAttacks_12
@@ -6939,6 +6946,8 @@ SpriteAtlas:
   - rpg (1)_2
   - rpg (1)_1
   - rpg (1)_0
+  - DialougeBoxTextHolder
+  - ResponseBoxText
   - Fountain_2
   - Fountain_0
   - Fountain_1
@@ -7067,6 +7076,7 @@ SpriteAtlas:
   - character_73
   - character_70
   - character_71
+  - DialougeBox
   - Room_Builder_borders_16x16_88
   - Room_Builder_borders_16x16_89
   - Room_Builder_borders_16x16_84
@@ -8515,6 +8525,8 @@ SpriteAtlas:
   - Room_Builder_Floors_16x16_105
   - Room_Builder_Floors_16x16_135
   - Room_Builder_Floors_16x16_161
+  - StatusBar
+  - DialougeBoxSmall 1
   - LastDrop
   - background
   - WaterNStore_8
