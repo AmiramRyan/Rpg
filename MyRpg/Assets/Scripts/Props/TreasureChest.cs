@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class TreasureChest : Interactable
 {
@@ -14,7 +15,7 @@ public class TreasureChest : Interactable
     [Header("Helpers")]
     public Signal getItemSignal;
     public GameObject textBubble;
-    public Text dialogText;
+    public TextMeshProUGUI myTxt;
 
     private Animator chestAnim;
     
@@ -34,7 +35,7 @@ public class TreasureChest : Interactable
 
     void Update()
     {
-            if (Input.GetKeyDown(KeyCode.Space) && playerInRange)
+            if (Input.GetButtonDown("check") && playerInRange)
             {
                 if (!isOpen)
                 {
@@ -53,7 +54,7 @@ public class TreasureChest : Interactable
     {
         //open dialog box and say somthing
         textBubble.SetActive(true);
-        dialogText.text = contents.relatedText;
+        myTxt.text = contents.relatedText;
         //add item to player inventory
         playerInv.AddToInv(contents);
         playerInv.currentItem = contents;

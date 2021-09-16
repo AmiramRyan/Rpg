@@ -43,7 +43,6 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
-        haveBow = CheckItem(playerBow);
         currentState = PlayerState.walk;
         myRigidBody = GetComponent<Rigidbody2D>();
         myAnimator = GetComponent<Animator>();

@@ -188,4 +188,4 @@ MonoBehaviour:
   openSprite: {fileID: -4950680412457382125, guid: 3390d5884c2608f4eb0096504c381f0e, type: 3}
   closeSprite: {fileID: -2869115396899081085, guid: 3390d5884c2608f4eb0096504c381f0e, type: 3}
   mySpr: {fileID: 1961172123500943159}
-  playerInv: {fileID: 11400000, guid: a90d2002ff034e2488ab59347d39205b, type: 2}
+  playerInv: {fileID: 11400000, guid: 3850919e181b22745b48225590b5c3d4, type: 2}

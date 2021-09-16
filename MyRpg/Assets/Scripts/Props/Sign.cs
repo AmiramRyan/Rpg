@@ -2,12 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class Sign : Interactable
 {
     
     public string whatDoseTheSignSay;
-    public Text dialogText;
+    public TextMeshProUGUI dialogText;
     public GameObject dialogBox;
 
 
@@ -15,7 +16,7 @@ public class Sign : Interactable
     // Update is called once per frame
     public void  Update()
     {
-            if (Input.GetKeyDown(KeyCode.Space) && playerInRange)
+            if (Input.GetButtonDown("check") && playerInRange)
             {
                 if (dialogBox.activeInHierarchy)
                 {
