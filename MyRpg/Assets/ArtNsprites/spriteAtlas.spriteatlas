@@ -44,13 +44,16 @@ SpriteAtlas:
     variantMultiplier: 1
     packables:
     - {fileID: 102900000, guid: 567a1fd0350ffdb43bdaf3702d5b8514, type: 3}
-    totalSpriteSurfaceArea: 3369431
+    totalSpriteSurfaceArea: 3439836
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
   - {fileID: 21300000, guid: 1a6d5b802d83bbb47abc47e339ff4745, type: 3}
+  - {fileID: 21300000, guid: eb0713b059e1fae4fa50e8b63ee417f8, type: 3}
+  - {fileID: 21300000, guid: ce63c8f08e65aa146b0876aff4155ad3, type: 3}
+  - {fileID: 21300000, guid: bee20df0e62cca546b4fdde210dc7acc, type: 3}
   - {fileID: 136123638574666257, guid: 451c565171e8ce24794223bcd56709b5, type: 3}
   - {fileID: 293919518158258091, guid: 451c565171e8ce24794223bcd56709b5, type: 3}
   - {fileID: -2417109873707893127, guid: 451c565171e8ce24794223bcd56709b5, type: 3}
@@ -1933,6 +1936,8 @@ SpriteAtlas:
   - {fileID: 3321681590055085053, guid: 82f8fdd2d7d922b47ba92f7832a18453, type: 3}
   - {fileID: -3750482850934594921, guid: 82f8fdd2d7d922b47ba92f7832a18453, type: 3}
   - {fileID: 5372776407919291188, guid: 82f8fdd2d7d922b47ba92f7832a18453, type: 3}
+  - {fileID: 1252243683051303324, guid: 3756ffe264a88ba488063a97f44763f2, type: 3}
+  - {fileID: 6781167332700664777, guid: 3756ffe264a88ba488063a97f44763f2, type: 3}
   - {fileID: 21300000, guid: cdc3cff290a26ac4b989b1ad5b1a4cf8, type: 3}
   - {fileID: -3341710896000023339, guid: 2fcf6103c6161dc45ac5a339adad60c1, type: 3}
   - {fileID: -281388077577735951, guid: 2fcf6103c6161dc45ac5a339adad60c1, type: 3}
@@ -1989,6 +1994,7 @@ SpriteAtlas:
   - {fileID: -3872301312134325013, guid: a4054d3431de12240a5f9d0cd513b6d4, type: 3}
   - {fileID: 2787649835547909964, guid: a4054d3431de12240a5f9d0cd513b6d4, type: 3}
   - {fileID: 7897019167756572247, guid: a4054d3431de12240a5f9d0cd513b6d4, type: 3}
+  - {fileID: 21300000, guid: 32b6e494168f22f45bbbcc0ca794c1ac, type: 3}
   - {fileID: 21300000, guid: fa5b5d55a4014104aad5504fa8d736a5, type: 3}
   - {fileID: -790699523677361007, guid: 02735c65064f20242a5940ef6e086340, type: 3}
   - {fileID: 8470420716495695676, guid: 02735c65064f20242a5940ef6e086340, type: 3}
@@ -2303,7 +2309,10 @@ SpriteAtlas:
   - {fileID: -7170365690858051690, guid: 0f11e7a55590e3244b4585d73c9e7e78, type: 3}
   - {fileID: -1665374809372249480, guid: 0f11e7a55590e3244b4585d73c9e7e78, type: 3}
   - {fileID: 21300000, guid: e79cc11609c794e438d94b76c86ab110, type: 3}
+  - {fileID: 21300000, guid: 195d2d2668961184599671fc6b147eec, type: 3}
   - {fileID: 21300000, guid: fcf1c45650b6f1c43b604250c104748d, type: 3}
+  - {fileID: 21300000, guid: f5e5a16669ee0f4439e659dba1efc09b, type: 3}
+  - {fileID: 21300000, guid: 7594517657944fd47956d8dd5ea4e13d, type: 3}
   - {fileID: 21300000, guid: 0175ee9674139db4c9d0526f0762dac7, type: 3}
   - {fileID: 5545763081943395156, guid: 19c5b1d770a37c94a89fb7576f6e2bc9, type: 3}
   - {fileID: 6409884548811645734, guid: 19c5b1d770a37c94a89fb7576f6e2bc9, type: 3}
@@ -3081,7 +3090,9 @@ SpriteAtlas:
   - {fileID: -2903190892296097466, guid: 9f03b4e8472b5734b922f335299e0dac, type: 3}
   - {fileID: -3070969452741559062, guid: 9f03b4e8472b5734b922f335299e0dac, type: 3}
   - {fileID: -1291174620826640275, guid: 9f03b4e8472b5734b922f335299e0dac, type: 3}
+  - {fileID: 21300000, guid: 1ab78be81b4647d4ba24d5e998dba4cf, type: 3}
   - {fileID: 21300000, guid: 699b09199ef5227419483b1ffa16338f, type: 3}
+  - {fileID: 21300000, guid: 74cde469aab920e478b7d86f582603ab, type: 3}
   - {fileID: 21300000, guid: 20f031992c1b22c4982792bf2b77e29c, type: 3}
   - {fileID: 21300000, guid: 651dbd992fa755842ac7125fe0b5d011, type: 3}
   - {fileID: 6608854275529481763, guid: 82b12e4a240cd2448a85380ab4039aa4, type: 3}
@@ -3700,6 +3711,7 @@ SpriteAtlas:
   - {fileID: -4978113134295867063, guid: 417430bd9f844b744aed6788811c4b82, type: 3}
   - {fileID: 47775018648080561, guid: 417430bd9f844b744aed6788811c4b82, type: 3}
   - {fileID: 21300000, guid: 625ecfcd8bac31140b8d29b8aa02c70d, type: 3}
+  - {fileID: 21300000, guid: 0e70aadd99596894c9d0a8c3e0027968, type: 3}
   - {fileID: -1986772863260763996, guid: 5b60001eedde5d3428904f61b2a056d0, type: 3}
   - {fileID: 5760800594879907098, guid: 5b60001eedde5d3428904f61b2a056d0, type: 3}
   - {fileID: 7597474578557255370, guid: 5b60001eedde5d3428904f61b2a056d0, type: 3}
@@ -5078,9 +5090,13 @@ SpriteAtlas:
   - {fileID: -7667630355914279461, guid: fc7ffc4edc1704b469f209bb81e8e123, type: 3}
   - {fileID: -8577819113285326228, guid: fc7ffc4edc1704b469f209bb81e8e123, type: 3}
   - {fileID: -8279688178891027127, guid: fc7ffc4edc1704b469f209bb81e8e123, type: 3}
+  - {fileID: 21300000, guid: 644c279ed15e71c40a8dbccd0eba1aa5, type: 3}
   - {fileID: 21300000, guid: 1672601f6bc167648b31e9ee2994873b, type: 3}
   m_PackedSpriteNamesToIndex:
   - tileset_C
+  - Boss2_full_shoot3
+  - Boss2_full_ready5
+  - Boss2_full_ready6
   - Overworld_827
   - Overworld_837
   - Overworld_847
@@ -6963,6 +6979,8 @@ SpriteAtlas:
   - rpg (1)_2
   - rpg (1)_1
   - rpg (1)_0
+  - Projectiles_0
+  - Projectiles_1
   - DialougeBoxTextHolder
   - IdleGuardRightHanded_3
   - IdleGuardRightHanded_2
@@ -7019,6 +7037,7 @@ SpriteAtlas:
   - frogman_41
   - frogman_44
   - frogman_45
+  - Boss2_full_ready3
   - bow
   - character_14
   - character_15
@@ -7333,7 +7352,10 @@ SpriteAtlas:
   - Room_Builder_borders_16x16_11
   - Room_Builder_borders_16x16_10
   - Arrow
+  - Boss2_full_ready
   - font
+  - Boss2_full_ready4
+  - BlueNPc
   - HalfFull
   - forest-level-4-sheet_18
   - forest-level-4-sheet_19
@@ -8111,7 +8133,9 @@ SpriteAtlas:
   - SummonSprite_1
   - SummonSprite_2
   - SummonSprite_3
+  - Boss2_full_shoot1
   - HpPotionBig
+  - Boss2_full_ready7
   - FullMana
   - RightArrow
   - Room_Builder_Floors_16x16_69
@@ -8730,6 +8754,7 @@ SpriteAtlas:
   - cave_108
   - cave_109
   - SwordIcon
+  - Boss2_full_ready2
   - objects_71
   - objects_70
   - objects_73
@@ -10108,6 +10133,7 @@ SpriteAtlas:
   - Room_Builder_Walls_16x16_954
   - Room_Builder_Walls_16x16_925
   - Room_Builder_Walls_16x16_955
+  - Boss2_full_shoot2
   - StatusBar 1
   m_RenderDataMap: {}
   m_Tag: spriteAtlas

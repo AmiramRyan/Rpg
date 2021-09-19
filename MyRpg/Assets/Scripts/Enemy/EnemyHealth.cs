@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EnemyHealth : GenericHealth
 {
+    public GameObject gotHitEffect;
     private void OnEnable()
     {
         currHp = maxHp.runTimeValue;
@@ -17,11 +18,16 @@ public class EnemyHealth : GenericHealth
 
     public override void TakeDmg(float amount)
     {
+        //play effect
+        GameObject tempEffect = Instantiate(gotHitEffect, transform.position, Quaternion.identity);
         currHp -= amount;
         if (currHp <= 0)
         {
             currHp = 0;
+            Destroy(tempEffect, 1f);
             Die();
         }
+        Destroy(tempEffect, 1f);
     }
+
 }

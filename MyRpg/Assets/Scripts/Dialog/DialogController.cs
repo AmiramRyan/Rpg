@@ -42,6 +42,12 @@ public class DialogController : MonoBehaviour
         RefreshView();
     }
 
+    public void EndCanvas()
+    {
+        DeleteOldDialogs();
+        dialogCanvas.SetActive(false);
+    }
+
     public void SetStory()
     {
         if (dialogVal.Value)

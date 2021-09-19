@@ -123,6 +123,7 @@ GameObject:
   - component: {fileID: 6884080907069129710}
   - component: {fileID: 6884080907069129711}
   - component: {fileID: 1382755854}
+  - component: {fileID: 8985406199857852460}
   m_Layer: 0
   m_Name: Att_Hitbox_right
   m_TagString: PlayerAttackHitBox
@@ -184,7 +185,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   knockTime: 0.2
   thrust: 2
-  otherTag: 
+  otherTag: Enemy
 --- !u!114 &1382755854
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -199,6 +200,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dmg: 1
   otherTag: Enemy
+--- !u!114 &8985406199857852460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6884080907069129712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39e0a5c5a6eda824f819926404a853ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dmg: 1
+  otherTag: Boss
 --- !u!1 &6884080907329561938
 GameObject:
   m_ObjectHideFlags: 0
@@ -357,15 +372,15 @@ MonoBehaviour:
   playerSpeed: 4
   attackCooldown: 0.2
   startPos: {fileID: 11400000, guid: be7c10eed8bf65f4e9b82e68687cc802, type: 2}
-  myRigidBody: {fileID: 0}
-  myAnimator: {fileID: 0}
+  myRigidBody: {fileID: 6884080907329561939}
+  myAnimator: {fileID: 6884080907329561932}
   currentState: 0
-  playerInventory: {fileID: 0}
+  playerInventory: {fileID: 11400000, guid: 3850919e181b22745b48225590b5c3d4, type: 2}
   receiveItemSprite: {fileID: 1836297924}
   playerHit: {fileID: 11400000, guid: 91db6bfbcbf0e4d45900f70b46f1df8d, type: 2}
   currentMp: {fileID: 11400000, guid: 64ebade1503665e478f52a9171dfff68, type: 2}
   playerMpSignal: {fileID: 11400000, guid: 7040ea525d50d5e42bf9c53b8f1cdc75, type: 2}
-  playerBow: {fileID: 0}
+  playerBow: {fileID: 11400000, guid: bb109e9267805a34788933a727f1afb9, type: 2}
   arrowProj: {fileID: 2960993685858243927, guid: b1a40232a31db08439cdfc70b939b672, type: 3}
 --- !u!95 &6884080907329561932
 Animator:
@@ -489,6 +504,7 @@ GameObject:
   - component: {fileID: 6884080907633061233}
   - component: {fileID: 6884080907633061230}
   - component: {fileID: 796171994}
+  - component: {fileID: 339736297045847314}
   m_Layer: 0
   m_Name: Att_Hitbox_down
   m_TagString: PlayerAttackHitBox
@@ -550,7 +566,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   knockTime: 0.2
   thrust: 2
-  otherTag: 
+  otherTag: Enemy
 --- !u!114 &796171994
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -565,6 +581,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dmg: 1
   otherTag: Enemy
+--- !u!114 &339736297045847314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6884080907633061235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39e0a5c5a6eda824f819926404a853ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dmg: 1
+  otherTag: Boss
 --- !u!1 &6884080907821416532
 GameObject:
   m_ObjectHideFlags: 0
@@ -577,6 +607,7 @@ GameObject:
   - component: {fileID: 6884080907821416530}
   - component: {fileID: 6884080907821416531}
   - component: {fileID: 1606134214}
+  - component: {fileID: 364756936009610518}
   m_Layer: 0
   m_Name: Att_Hitbox_up
   m_TagString: PlayerAttackHitBox
@@ -638,7 +669,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   knockTime: 0.2
   thrust: 2
-  otherTag: 
+  otherTag: Enemy
 --- !u!114 &1606134214
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -653,6 +684,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dmg: 1
   otherTag: Enemy
+--- !u!114 &364756936009610518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6884080907821416532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39e0a5c5a6eda824f819926404a853ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dmg: 1
+  otherTag: Boss
 --- !u!1 &6884080908737784825
 GameObject:
   m_ObjectHideFlags: 0
@@ -665,6 +710,7 @@ GameObject:
   - component: {fileID: 6884080908737784823}
   - component: {fileID: 6884080908737784820}
   - component: {fileID: 1244769793}
+  - component: {fileID: 5496802387028198143}
   m_Layer: 0
   m_Name: Att_Hitbox_left
   m_TagString: PlayerAttackHitBox
@@ -726,7 +772,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   knockTime: 0.2
   thrust: 2
-  otherTag: 
+  otherTag: Enemy
 --- !u!114 &1244769793
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -741,6 +787,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dmg: 1
   otherTag: Enemy
+--- !u!114 &5496802387028198143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6884080908737784825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39e0a5c5a6eda824f819926404a853ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dmg: 1
+  otherTag: Boss
 --- !u!1 &7520829251107658206
 GameObject:
   m_ObjectHideFlags: 0

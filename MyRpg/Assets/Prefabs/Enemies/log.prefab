@@ -250,3 +250,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHp: {fileID: 11400000, guid: 5ffd1b081b1703a40a9ea4de51f717d8, type: 2}
   currHp: 0
+  gotHitEffect: {fileID: 5625566942724520153, guid: 61dc1c782c91ddc42a3da2c0a769e1a6, type: 3}

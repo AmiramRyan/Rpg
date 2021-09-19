@@ -77876,10 +77876,10 @@ PrefabInstance:
     - target: {fileID: 8703650831903435340, guid: 2e30b3ce27d21e440bc9142528d92fb8, type: 3}
       propertyPath: dialogText
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 6648214503130287698}
     - target: {fileID: 8703650831903435340, guid: 2e30b3ce27d21e440bc9142528d92fb8, type: 3}
       propertyPath: whatDoseTheSignSay
-      value: Aharar!
+      value: Who are you?
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2e30b3ce27d21e440bc9142528d92fb8, type: 3}
@@ -79404,6 +79404,7 @@ GameObject:
   - component: {fileID: 1867691329}
   - component: {fileID: 1867691330}
   - component: {fileID: 1867691331}
+  - component: {fileID: 1867691332}
   m_Layer: 0
   m_Name: Trigger
   m_TagString: Untagged
@@ -79469,6 +79470,7 @@ MonoBehaviour:
   dialogVal: {fileID: 11400000, guid: 4453691e4dea1ac42a73b6bd426c4d32, type: 2}
   dialogAsset: {fileID: 4900000, guid: 42a84ef369f619442a3372a546aa2bd4, type: 3}
   branchingDialogSignal: {fileID: 11400000, guid: 2807c1c8ac48eef4b9effdfa6aea81a4, type: 2}
+  CloseDialogNpc: {fileID: 11400000, guid: 07524ee93999a1c40b17b172c72409a8, type: 2}
 --- !u!114 &1867691331
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -79488,6 +79490,34 @@ MonoBehaviour:
       - m_Target: {fileID: 1837839180}
         m_TargetAssemblyTypeName: DialogController, Assembly-CSharp
         m_MethodName: StartCanvas
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1867691332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1867691327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd1837998773ee841a159deca3ed392f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  signal: {fileID: 11400000, guid: 07524ee93999a1c40b17b172c72409a8, type: 2}
+  signalEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1837839180}
+        m_TargetAssemblyTypeName: DialogController, Assembly-CSharp
+        m_MethodName: EndCanvas
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -80636,6 +80666,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0.7470703
       objectReference: {fileID: 0}
+    - target: {fileID: 1357239838, guid: 9c8a00f5ac559cd41a45ff7c4bcb58d0, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.000061035156
+      objectReference: {fileID: 0}
     - target: {fileID: 1410187974, guid: 9c8a00f5ac559cd41a45ff7c4bcb58d0, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -80802,7 +80836,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2045222943967669150, guid: 9c8a00f5ac559cd41a45ff7c4bcb58d0, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 1.9750023
+      value: 1.9749985
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c8a00f5ac559cd41a45ff7c4bcb58d0, type: 3}
@@ -81629,6 +81663,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DialogCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 9067404047313904574, guid: 3875759d988e4f5489d6cd00ac434092, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9067404047313904575, guid: 3875759d988e4f5489d6cd00ac434092, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -81719,7 +81757,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9067404048844921532, guid: 3875759d988e4f5489d6cd00ac434092, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3875759d988e4f5489d6cd00ac434092, type: 3}

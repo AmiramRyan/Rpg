@@ -62,4 +62,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cafc27b7ed1f654486623638447c563, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Chests: []
+  playerHp: {fileID: 11400000, guid: 1c6af593bccbc154e932a52b434b483c, type: 2}
+  playerMp: {fileID: 11400000, guid: 64ebade1503665e478f52a9171dfff68, type: 2}
+  playerHpContainer: {fileID: 11400000, guid: d200b949510d798498d486d9bd479aa4, type: 2}
+  playerMpContainer: {fileID: 11400000, guid: 12825078dfb587c4dbae4295fc52068a, type: 2}
   myInv: {fileID: 11400000, guid: 3850919e181b22745b48225590b5c3d4, type: 2}

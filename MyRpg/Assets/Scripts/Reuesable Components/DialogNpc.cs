@@ -11,6 +11,7 @@ public class DialogNpc : Interactable
 
     //dialog
     [SerializeField] private Signal branchingDialogSignal;
+    [SerializeField] private Signal CloseDialogNpc;
 
     private void Update()
     {
@@ -20,6 +21,22 @@ public class DialogNpc : Interactable
             {
                 dialogVal.Value = dialogAsset;
                 branchingDialogSignal.Rise();
+            }
+        }
+    }
+
+    public override void OnTriggerExit2D(Collider2D other)
+    {
+        if (playerInRange)
+        {
+            if (other.CompareTag("Player") && other.isTrigger)
+            {
+                if (activeObj)
+                {
+                    clueSignal.Rise();
+                    CloseDialogNpc.Rise();
+                }
+                playerInRange = false;
             }
         }
     }

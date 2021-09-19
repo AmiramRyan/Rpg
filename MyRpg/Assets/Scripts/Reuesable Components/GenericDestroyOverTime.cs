@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class GenericDestroyOverTime : MonoBehaviour
 {
-    [SerializeField]private float lifeTime;
+    public float lifeTime;
 
     // Update is called once per frame
-    void Update()
+    public virtual void Update()
     {
         lifeTime -= Time.deltaTime;
         if (lifeTime <= 0)
